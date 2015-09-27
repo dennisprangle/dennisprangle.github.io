@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Dennis Prangle home page
+title: Dennis Prangle's home page
 ---
 {% include JB/setup %}
 
