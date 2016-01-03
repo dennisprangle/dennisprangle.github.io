@@ -28,7 +28,7 @@ It's running some (slightly customised?) flavour of ubuntu which includes quite 
 - quicktile (python script giving keyboard shortcuts for tiling - there's compiz options for this but I can never get them to work)
 - thunderbird extensions
   - exQuilla (to work with exchange server)
-  - markdown here
+  - markdown here (update Jan 2016: I stopped using this as thunderbird now has an insert "Mathematical Formula" option that seems to work with a bigger range of email clients)
   - archive here (keyboard shortcuts for moving messages)
 - firefox extensions
   - adblock plus
