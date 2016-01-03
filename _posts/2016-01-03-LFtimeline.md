@@ -40,4 +40,6 @@ There are some other ways to avoid likelihood evaluations - e.g. [empirical like
 
 - 2010 **Synthetic likelihood**, [Wood](http://www.nature.com/nature/journal/v466/n7310/abs/nature09319.html).
 
+- 2015 Using random forests for likelihood-free model choice, [Pudlo et al](http://bioinformatics.oxfordjournals.org/content/early/2015/12/23/bioinformatics.btv684.abstract).
+
 - 2015 **Optimisation Monte Carlo**, [Meeds and Welling](http://papers.nips.cc/paper/5881-optimization-monte-carlo-efficient-and-embarrassingly-parallel-likelihood-free-inference). See also the **reverse sampler** of [Forneron and Ng](http://arxiv.org/abs/1506.04017).
