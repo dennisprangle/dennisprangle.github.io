@@ -12,6 +12,9 @@ Papers
 
 ###Preprints
 
+- [Summary statistics in Approximate Bayesian Computation](http://arxiv.org/abs/1512.05633) Dennis Prangle
+  - Preprint of a chapter to appear in the Handbook of ABC, edited by S. Sisson, Y. Fan, and M. Beaumont.
+
 - [Adapting the ABC distance function](http://arxiv.org/abs/1507.00874)  
 Dennis Prangle
   - See also the [code used in the paper](https://github.com/dennisprangle/ABCDistances.jl).  
