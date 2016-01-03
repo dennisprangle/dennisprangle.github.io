@@ -6,8 +6,7 @@ title: Dennis Prangle's home page
 
 I'm a [lecturer in statistics](http://www.ncl.ac.uk/maths/staff/profile/dennis.prangle) at the University of Newcastle where I research methods for computational and Bayesian statistics, especially [likelihood-free](https://en.wikipedia.org/wiki/Approximate_Bayesian_computation) approaches.
 
-I'm transferring my main personal website here.
-Here is the content so far...
+##Resources
 
 - [Publications](pub.html)
 - [My CV](https://dl.dropboxusercontent.com/u/5302937/DennisPrangleCV.pdf)
