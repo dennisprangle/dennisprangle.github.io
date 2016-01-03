@@ -29,7 +29,7 @@ It's running some (slightly customised?) flavour of ubuntu which includes quite 
 - thunderbird extensions
   - exQuilla (to work with exchange server)
   - markdown here (update Jan 2016: I stopped using this as thunderbird now has an insert "Mathematical Formula" option that seems to work with a bigger range of email clients)
-  - archive here (keyboard shortcuts for moving messages)
+  - archive this (keyboard shortcuts for moving messages)
 - firefox extensions
   - adblock plus
   - lastpass
