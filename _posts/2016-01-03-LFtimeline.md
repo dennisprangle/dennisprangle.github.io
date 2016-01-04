@@ -8,7 +8,7 @@ tags: [Likelihood-free, ABC]
 {% include JB/setup %}
 
 During my PhD I started compiling a mental timeline of the appearance of various "likelihood-free" inference methods.
-I wrote this up for a talk in 2013 and thought it was time to make an online version so I can continue to add to it.
+I wrote this up for a talk in 2013 and I've found got round to making an online version so I can continue to add to it.
 Please let me know if there are any mistakes or things I should add.
 
 The methods listed perform statistical inference based on repeated model simulations rather than likelihood evaluations, which are expensive or impossible for some complex models.
@@ -16,7 +16,7 @@ There are some other ways to avoid likelihood evaluations - e.g. [empirical like
 
 ###1980s
 
-- 1984 [Diggle and Gratton](http://www.jstor.org/stable/2345504) on inference for implicit models. This paper also discusses some precursors in the 1970s which use likelihood free methods for particular applications.
+- 1984 [Diggle and Gratton](http://www.jstor.org/stable/2345504) on inference for implicit models. This paper also discusses some precursors in the 1970s which use ad-hoc likelihood-free methods for particular applications.
 
 - 1984 [Rubin](http://projecteuclid.org/euclid.aos/1176346785) presents a likelihood-free rejection sampling algorithm as an intuitive explanation of Bayesian methods, but not as a practical method.
 
@@ -42,4 +42,4 @@ There are some other ways to avoid likelihood evaluations - e.g. [empirical like
 
 - 2015 Using random forests for likelihood-free model choice, [Pudlo et al](http://bioinformatics.oxfordjournals.org/content/early/2015/12/23/bioinformatics.btv684.abstract).
 
-- 2015 **Optimisation Monte Carlo**, [Meeds and Welling](http://papers.nips.cc/paper/5881-optimization-monte-carlo-efficient-and-embarrassingly-parallel-likelihood-free-inference). See also the **reverse sampler** of [Forneron and Ng](http://arxiv.org/abs/1506.04017).
+- 2015 **Optimisation Monte Carlo**, [Meeds and Welling](http://papers.nips.cc/paper/5881-optimization-monte-carlo-efficient-and-embarrassingly-parallel-likelihood-free-inference) and the closely related **reverse sampler** of [Forneron and Ng](http://arxiv.org/abs/1506.04017).
