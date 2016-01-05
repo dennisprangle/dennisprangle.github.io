@@ -8,7 +8,7 @@ tags: [Likelihood-free, ABC]
 {% include JB/setup %}
 
 During my PhD I started compiling a mental timeline of the appearance of various "likelihood-free" inference methods.
-I wrote this up for a talk in 2013 and I've found got round to making an online version so I can continue to add to it.
+I wrote this up for a talk a couple of years ago and I've finally got round to making an online version so I can continue to add to it.
 Please let me know if there are any mistakes or things I should add.
 
 The methods listed perform statistical inference based on repeated model simulations rather than likelihood evaluations, which are expensive or impossible for some complex models.
