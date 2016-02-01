@@ -20,14 +20,16 @@ Dennis Prangle
   - See also the [code used in the paper](https://github.com/dennisprangle/ABCDistances.jl).  
 ![Paper image]({{ site.url }}/assets/adapting_ABC_distance.jpg "Distance adaption"){:height="300px" width="300px"}
 
-###2015
-
-- [abctools: an R package for tuning approximate Bayesian computation analyses](http://journal.r-project.org/archive/accepted/nunes-prangle.pdf) *The R Journal*  
-Matthew Nunes and Dennis Prangle
+###2016
 
 - [Lazy ABC](http://link.springer.com/article/10.1007/s11222-014-9544-3) *Statistics and Computing*  
 Dennis Prangle
   - See also [blog post](https://dennisprangleblog.wordpress.com/2014/06/02/lazy-abc), [example code](https://github.com/dennisprangle/lazyABCexample) and summary paper "Lazier ABC".
+
+###2015
+
+- [abctools: an R package for tuning approximate Bayesian computation analyses](http://journal.r-project.org/archive/accepted/nunes-prangle.pdf) *The R Journal*  
+Matthew Nunes and Dennis Prangle
 
 - [The identification of individuals of advanced age using degeneration of the sternal end of the clavicle](http://onlinelibrary.wiley.com/doi/10.1002/ajpa.22639/full) *American journal of physical anthropology*  
 Ceri G. Falys and Dennis Prangle
@@ -72,7 +74,7 @@ Software packages
 - abctools R package for tuning ABC analyses. Available on [CRAN](http://cran.r-project.org/web/packages/abctools) or [github](https://github.com/dennisprangle/abctools). Co-authored with Matt Nunes.
 
   - The package implements (1) methods to choose summary statistics (2) coverage property diagnostics.
-  - A paper explaining typical usage is under review.
+  - See above for a 2015 R Journal paper explaining typical usage.
 
 - gk R package for the g-and-k distribution. Available on [github](http://www.github.com/dennisprangle/gk) only for now as not completely finished!
 
