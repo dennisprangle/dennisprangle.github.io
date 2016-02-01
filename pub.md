@@ -28,7 +28,7 @@ Dennis Prangle
 
 ###2015
 
-- [abctools: an R package for tuning approximate Bayesian computation analyses](http://journal.r-project.org/archive/accepted/nunes-prangle.pdf) *The R Journal*  
+- [abctools: an R package for tuning approximate Bayesian computation analyses](https://journal.r-project.org/archive/2015-2/nunes-prangle.pdf) *The R Journal*  
 Matthew Nunes and Dennis Prangle
 
 - [The identification of individuals of advanced age using degeneration of the sternal end of the clavicle](http://onlinelibrary.wiley.com/doi/10.1002/ajpa.22639/full) *American journal of physical anthropology*  
