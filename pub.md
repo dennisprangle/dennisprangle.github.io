@@ -10,7 +10,7 @@ Please email me for copies of anything below that you cannot access.
 Papers
 ------
 
-###Preprints
+### Preprints
 
 - [Summary statistics in Approximate Bayesian Computation](http://arxiv.org/abs/1512.05633) Dennis Prangle
   - Preprint of a chapter to appear in the Handbook of ABC, edited by S. Sisson, Y. Fan, and M. Beaumont.
@@ -20,13 +20,13 @@ Dennis Prangle
   - See also the [code used in the paper](https://github.com/dennisprangle/ABCDistances.jl).  
 ![Paper image]({{ site.url }}/assets/adapting_ABC_distance.jpg "Distance adaption"){:height="300px" width="300px"}
 
-###2016
+### 2016
 
 - [Lazy ABC](http://link.springer.com/article/10.1007/s11222-014-9544-3) *Statistics and Computing*  
 Dennis Prangle
   - See also [blog post](https://dennisprangleblog.wordpress.com/2014/06/02/lazy-abc), [example code](https://github.com/dennisprangle/lazyABCexample) and summary paper "Lazier ABC".
 
-###2015
+### 2015
 
 - [abctools: an R package for tuning approximate Bayesian computation analyses](https://journal.r-project.org/archive/2015-2/nunes-prangle.pdf) *The R Journal*  
 Matthew Nunes and Dennis Prangle
@@ -34,7 +34,7 @@ Matthew Nunes and Dennis Prangle
 - [The identification of individuals of advanced age using degeneration of the sternal end of the clavicle](http://onlinelibrary.wiley.com/doi/10.1002/ajpa.22639/full) *American journal of physical anthropology*  
 Ceri G. Falys and Dennis Prangle
 
-###2014
+### 2014
 
 - [Lazier ABC](https://www.dropbox.com/s/b3d6d2vkgpzq8ze/lazier.pdf) Contributed NIPS workshop paper  
 Dennis Prangle
@@ -49,20 +49,20 @@ Dennis Prangle, Micheal Blum, Gordana Popovic, Scott Sisson
 *Statistical Applications in Genetics and Molecular Biology*  
 Dennis Prangle, Paul Fearnhead, Murray P. Cox, Patrick J. Biggs, Nigel P. French
 
-###2013
+### 2013
 
 - [A comparative review of dimension reduction methods in approximate Bayesian computation](http://projecteuclid.org/euclid.ss/1369147911)
 *Statistical Science*  
 Micheal Blum, Matt Nunes, Dennis Prangle, Scott Sisson 
 
-###2012
+### 2012
 
 - [Constructing summary statistics for approximate Bayesian computation: semi-automatic ABC](http://onlinelibrary.wiley.com/doi/10.1111/j.1467-9868.2011.01010.x/abstract)
 *Journal of the Royal Statistical Society Series B*  
 Paul Fearnhead, Dennis Prangle
   - See my thesis below for supplementary material.
 
-###2011
+### 2011
 - [Summary statistics and sequential methods for approximate Bayesian computation](https://www.dropbox.com/s/wbvtj518ztwvbxu/thesis_DP.pdf) *PhD thesis*  
 Dennis Prangle
   - [Version without hyperlinks](https://www.dropbox.com/s/9xe2leu4nz6i8h5/thesis_DP_nohyper.pdf).  
