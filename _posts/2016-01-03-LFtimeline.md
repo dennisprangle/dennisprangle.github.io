@@ -14,7 +14,7 @@ Please let me know if there are any mistakes or things I should add.
 The methods listed perform statistical inference based on repeated model simulations rather than likelihood evaluations, which are expensive or impossible for some complex models.
 There are some other ways to avoid likelihood evaluations - e.g. [empirical likelihood](http://www.pnas.org/content/110/4/1321.short) - which could also be thought as a "likelihood-free", so perhaps there's a need for a more precise but equally catchy name in the future!
 
-###1980s
+### 1980s
 
 - 1984 [Diggle and Gratton](http://www.jstor.org/stable/2345504) on inference for implicit models. This paper also discusses some precursors in the 1970s which use ad-hoc likelihood-free methods for particular applications.
 
@@ -22,7 +22,7 @@ There are some other ways to avoid likelihood evaluations - e.g. [empirical like
 
 - 1989 **Simulated method of moments**, [McFadden](http://www.jstor.org/stable/1913621) (econometrics).
 
-###1990s
+### 1990s
 
 - 1992 **GLUE**, [Beven and Binley](http://onlinelibrary.wiley.com/doi/10.1002/hyp.3360060305/abstract) (hydrology).
 
@@ -30,13 +30,13 @@ There are some other ways to avoid likelihood evaluations - e.g. [empirical like
 
 - 1997 Approximate Bayesian computation (**ABC**) (population genetics). Early papers include [Tavare et al](http://www.genetics.org/content/145/2/505.short) and [Fu and Li](http://mbe.oxfordjournals.org/content/14/2/195.short).
 
-###2000s
+### 2000s
 
 - 2006 **Convolution filter**, [Campillo and Rossi](http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4177291).
 
 - 2006 **Iterated filtering**, [Ionides et al](http://www.pnas.org/content/103/49/18438.short).
 
-###2010s
+### 2010s
 
 - 2010 **Synthetic likelihood**, [Wood](http://www.nature.com/nature/journal/v466/n7310/abs/nature09319.html).
 

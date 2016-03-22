@@ -11,7 +11,7 @@ As I've just started a new job, I've been given a new desktop PC to work on.
 I thought I'd keep track of what I install on it so that I've got a complete list for next time.
 It's running some (slightly customised?) flavour of ubuntu which includes quite a lot of stuff by default.
 
-##Already installed
+## Already installed
 
 - firefox
 - thunderbird
@@ -19,7 +19,7 @@ It's running some (slightly customised?) flavour of ubuntu which includes quite 
 - R
 - latex
 
-##Additions
+## Additions
 
 - emacs (not installed by default?!)
 - dropbox
