@@ -12,7 +12,7 @@ Papers
 
 ### Preprints
 
-- [An ABC interpretation of the multiple auxiliary variable method]((http://arxiv.org/abs/1604.08102)  
+- [An ABC interpretation of the multiple auxiliary variable method](http://arxiv.org/abs/1604.08102)  
 Dennis Prangle and Richard Everitt
 
 - [Summary statistics in Approximate Bayesian Computation](http://arxiv.org/abs/1512.05633)  
