@@ -92,6 +92,9 @@ The paper considers several schemes:
 3. Using the result of 2 as a proposal density to fit a mixture estimate of the posterior.
 
 As noted in the paper, this general idea of a sequential approach is similar in spirit to existing sequential Monte Carlo algorithms for ABC.
+Edit: In this literature, it's considered to be a good idea to sample $$\theta$$ from a wider distribution than the current approximation of the posterior:
+see [Beaumont et al](http://biomet.oxfordjournals.org/content/96/4/983) and a more theoretical argument in [Li and Fearnhead](http://arxiv.org/abs/1506.03481).
+I wonder if the same applies here.
 
 ## Simulation studies
 
@@ -134,3 +137,5 @@ Finally here are some other comments on the approach.
 * **Latent variables** Sometimes we'd like to include latent variables as parameters, and then integrate them out.
 For example in model choice it's generally efficient to learn about the parameters of each model.
 Similarly in parameter inference perhaps it would be beneficial to learn about latent variables representing part of the stochastic simulation process.
+
+* Edit: **Tails** Normal mixtures won't be able to match especially heavy or light tailed posteriors. Is there a flexible alternative?
