@@ -7,7 +7,7 @@ tags: [ABC, Likelihood-free, Neural networks]
 ---
 {% include JB/setup %}
 
-In [part 1](/research/2016/06/07/bayesian-inference-by-neural-networks/) I reviewed likelihood-free inference and its limitations.
+In [part 1](/research/2016/06/07/bayesian-inference-by-neural-networks) I reviewed likelihood-free inference and its limitations.
 This post looks at a [new approach](http://arxiv.org/pdf/1605.06376.pdf) by George Papamakarios and Iain Murray which avoids some of these issues and delivers an orders-of-magnitude improvement in performance.
 Most of the post will describe their paper.
 Then I'll close with a few comments on the method's advantages and possible limitations.
@@ -18,7 +18,7 @@ For now I'll consider the problem of approximating the posterior $$\pi(\theta \v
 The paper also simulates from other distributions, which I'll discuss below later.
 (n.b. Out of habit, I'm using slightly different notation to the paper. They use $$x$$ for datasets, $$x_o$$ for the observations, and $$p$$ instead of $$\pi$$.)
 
-As described in [part 1](/research/2016/06/07/bayesian-inference-by-neural-networks/), ABC approaches operate by a nearest neighbours approach.
+As described in [part 1](/research/2016/06/07/bayesian-inference-by-neural-networks), ABC approaches operate by a nearest neighbours approach.
 That is, it approximates the posterior using $$\theta_i$$ values such that $$y_i$$ is close to $$y_0$$.
 But this performs poorly unless $$y$$ is low dimensional.
 
@@ -105,7 +105,7 @@ In some cases the quality of the fit is similar for both of these methods, but i
 
 ## Comments
 
-This paper certainly seems like a big step forwards for likelihood-free inference, making substantial progress on most of the limitations listed in my [first post](/research/2016/06/07/bayesian-inference-by-neural-networks/).
+This paper certainly seems like a big step forwards for likelihood-free inference, making substantial progress on most of the limitations listed in my [first post](/research/2016/06/07/bayesian-inference-by-neural-networks).
 Benefits include:
 
 * Beating the performance of ABC methods by orders of magnitude.
