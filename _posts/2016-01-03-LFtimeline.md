@@ -7,8 +7,7 @@ tags: [Likelihood-free, ABC]
 ---
 {% include JB/setup %}
 
-During my PhD I started compiling a mental timeline of the appearance of various "likelihood-free" inference methods.
-I wrote this up for a talk a couple of years ago and I've finally got round to making an online version so I can continue to add to it.
+This is an incomplete of the appearance of various "likelihood-free" inference methods.
 Please let me know if there are any mistakes or things I should add.
 
 The methods listed perform statistical inference based on repeated model simulations rather than likelihood evaluations, which are expensive or impossible for some complex models.
@@ -32,14 +31,25 @@ There are some other ways to avoid likelihood evaluations - e.g. [empirical like
 
 ### 2000s
 
+- 2003 **ABC-MCMC**, [Marjoram et al](http://www.pnas.org/content/100/26/15324.full).
+
 - 2006 **Convolution filter**, [Campillo and Rossi](http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4177291).
 
 - 2006 **Iterated filtering**, [Ionides et al](http://www.pnas.org/content/103/49/18438.short).
+
+- 2007-2012 **ABC-SMC/PMC**, [Sisson et al](http://www.pnas.org/content/104/6/1760.full), [Beaumont et al](http://biomet.oxfordjournals.org/content/96/4/983), [Toni et al](http://rsif.royalsocietypublishing.org/content/6/31/187), [Del Moral, et al](http://link.springer.com/article/10.1007/s11222-011-9271-y).
 
 ### 2010s
 
 - 2010 **Synthetic likelihood**, [Wood](http://www.nature.com/nature/journal/v466/n7310/abs/nature09319.html).
 
-- 2015 Using random forests for likelihood-free model choice, [Pudlo et al](http://bioinformatics.oxfordjournals.org/content/early/2015/12/23/bioinformatics.btv684.abstract).
+- 2010 **Coupled ABC**, [Neal](http://link.springer.com/article/10.1007/s11222-010-9216-x) (epidemiology) based on utilising latent variables.
+
+- 2015 **Classifier**-based approaches: the random forest method of [Pudlo et al](http://bioinformatics.oxfordjournals.org/content/early/2015/12/23/bioinformatics.btv684.abstract) and the likelihood ratio estimation method of [Cranmer et al](http://arxiv.org/abs/1506.02169). Some related earlier work is by
 
 - 2015 **Optimisation Monte Carlo**, [Meeds and Welling](http://papers.nips.cc/paper/5881-optimization-monte-carlo-efficient-and-embarrassingly-parallel-likelihood-free-inference) and the closely related **reverse sampler** of [Forneron and Ng](http://arxiv.org/abs/1506.04017).
+Both exploit a latent variable formulation.
+
+- 2016 [Graham and Stokey](http://arxiv.org/abs/1605.07826) use **constrained Hamiltonian Monte Carlo** to perform joint updates on parameters and latent variables conditioned on observations.
+
+- 2016 [Papamakarios and Murray](http://arxiv.org/abs/1605.06376) learn a **mixture density network** to predict the parameter posterior from observations.
