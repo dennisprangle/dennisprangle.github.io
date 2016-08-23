@@ -19,12 +19,18 @@ Dennis Prangle and Richard Everitt
 Dennis Prangle
   - Preprint of a chapter to appear in the Handbook of ABC, edited by S. Sisson, Y. Fan, and M. Beaumont.
 
-- [Adapting the ABC distance function](http://arxiv.org/abs/1507.00874)  
+### 2016
+
+- [A tutorial introduction to Bayesian inference for stochastic epidemic models using Approximate Bayesian Computation](http://www.sciencedirect.com/science/article/pii/S0025556416300839)
+*Mathematical Biosciences*  
+Theodore Kypraios, Peter Neal and Dennis Prangle
+  - See also the [supporting code](https://github.com/kypraios/epiABC).
+
+- [Adapting the ABC distance function](http://projecteuclid.org/euclid.ba/1460641065)
+*Bayesian Analysis*  
 Dennis Prangle
   - See also the [code used in the paper](https://github.com/dennisprangle/ABCDistances.jl).  
 ![Paper image]({{ site.url }}/assets/adapting_ABC_distance.jpg "Distance adaption"){:height="300px" width="300px"}
-
-### 2016
 
 - [Lazy ABC](http://link.springer.com/article/10.1007/s11222-014-9544-3) *Statistics and Computing*  
 Dennis Prangle
@@ -57,7 +63,7 @@ Dennis Prangle, Paul Fearnhead, Murray P. Cox, Patrick J. Biggs, Nigel P. French
 
 - [A comparative review of dimension reduction methods in approximate Bayesian computation](http://projecteuclid.org/euclid.ss/1369147911)
 *Statistical Science*  
-Micheal Blum, Matt Nunes, Dennis Prangle, Scott Sisson 
+Micheal Blum, Matt Nunes, Dennis Prangle, Scott Sisson
 
 ### 2012
 
@@ -101,11 +107,11 @@ Presentation material (2010)
 
 
 
-{% comment %} 
+{% comment %}
 	        <p><a href=ABC_Sydney_DP.pdf>Lazy ABC</a> - slides from ABC in Sydney workshop (2014) (less technical talk)</p>
 		<p><a href=DARC_DennisPrangle.pdf>Approximate Bayesian Computation and Particle Filters</a> - slides from DARC talk at Reading (2014)</p>
   		<p><a href=seminar_DP_Leeds.pdf>Summary statistics for ABC model choice</a> - slides from Leeds seminar (2014)</p>
 		<p><a href=Bayes250_DP_web.pdf>Approximate Bayesian Computation</a> - slides from Bayes 250 conference (2013)</p>
 		<p><a href=STOR601_DennisPrangle.pdf>Approximate Bayesian Computation</a> - slides from a graduate lecture on ABC (2012)</p>
 		<p><a href=PrOM_DP.pdf>Semi-automatic ABC</a> - slides from pre-ordinary RSS meeting on Fearnhead and Prangle (2011)</p>
-{% endcomment %} 
+{% endcomment %}
