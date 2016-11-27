@@ -12,14 +12,19 @@ Papers
 
 ### Preprints
 
-- [An ABC interpretation of the multiple auxiliary variable method](http://arxiv.org/abs/1604.08102)  
-Dennis Prangle and Richard Everitt
+- [A rare event approach to high dimensional Approximate Bayesian computation](https://arxiv.org/abs/1611.02492)
+Dennis Prangle, Richard G. Everitt, Theodore Kypraios
+  - See also the [supporting code](https://github.com/dennisprangle/RareEventABC.jl).
 
 - [Summary statistics in Approximate Bayesian Computation](http://arxiv.org/abs/1512.05633)  
 Dennis Prangle
   - Preprint of a chapter to appear in the Handbook of ABC, edited by S. Sisson, Y. Fan, and M. Beaumont.
 
 ### 2016
+
+- [An ABC interpretation of the multiple auxiliary variable method](http://arxiv.org/abs/1604.08102)  
+Dennis Prangle and Richard G. Everitt
+  - Technical report
 
 - [A tutorial introduction to Bayesian inference for stochastic epidemic models using Approximate Bayesian Computation](http://www.sciencedirect.com/science/article/pii/S0025556416300839)
 *Mathematical Biosciences*  

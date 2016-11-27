@@ -14,6 +14,10 @@ The [second post](/research/2016/06/07/bayesian-inference-by-neural-networks2) w
 Over the next few months I'm hoping to spend some time experimenting with their method,
 and I might post about my experiences in implementing it, if it's amenable to short blog posts!
 
+**Edit Nov 2016:** I started trying to implement this method but got distracted by new research ideas!
+Also I found George Papamakarious's [theano code](https://github.com/gpapamak/epsilon_free_inference) for this paper. Amongst other things, this illustrates how to implement Cholesky products neatly in theano, something I'd have struggled to figure out by myself.
+More generally the [Edward library](http://edwardlib.org/tutorials/mixture-density-network) can implement MDNs using TensorFlow, although I'm not sure if it automates Cholesky products.
+
 ## Intractable likelihoods
 
 *Model-based statistics* assumes that the observed data (e.g. deaths from an infectious disease) has been produced from a random distribution or *probability model*.
@@ -108,7 +112,7 @@ Even efficient ABC algorithms usually require at least tens of thousands of simu
 This can be impractical for expensive simulators.
 
 ### 4) High dimensional data (and parameters)
- 
+
 ABC suffers from a *curse of dimensionality* problem.
 This is because it uses a nearest neighbours type approach.
 Parameters are inferred based on the simulated data sets which are closest to the observations.
