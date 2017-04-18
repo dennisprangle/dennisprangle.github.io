@@ -20,22 +20,24 @@ Dennis Prangle, Richard G. Everitt, Theodore Kypraios
 Dennis Prangle
   - Preprint of a chapter to appear in the Handbook of ABC, edited by S. Sisson, Y. Fan, and M. Beaumont.
 
-### 2016
-
-- [An ABC interpretation of the multiple auxiliary variable method](http://arxiv.org/abs/1604.08102)  
-Dennis Prangle and Richard G. Everitt
-  - Technical report
-
-- [A tutorial introduction to Bayesian inference for stochastic epidemic models using Approximate Bayesian Computation](http://www.sciencedirect.com/science/article/pii/S0025556416300839)
-*Mathematical Biosciences*  
-Theodore Kypraios, Peter Neal and Dennis Prangle
-  - See also the [supporting code](https://github.com/kypraios/epiABC).
+### 2017
 
 - [Adapting the ABC distance function](http://projecteuclid.org/euclid.ba/1460641065)
 *Bayesian Analysis*  
 Dennis Prangle
   - See also the [code used in the paper](https://github.com/dennisprangle/ABCDistances.jl).  
 ![Paper image]({{ site.url }}/assets/adapting_ABC_distance.jpg "Distance adaption"){:height="300px" width="300px"}
+
+- [A tutorial introduction to Bayesian inference for stochastic epidemic models using Approximate Bayesian Computation](http://www.sciencedirect.com/science/article/pii/S0025556416300839)
+*Mathematical Biosciences*  
+Theodore Kypraios, Peter Neal and Dennis Prangle
+  - See also the [supporting code](https://github.com/kypraios/epiABC).
+
+### 2016
+
+- [An ABC interpretation of the multiple auxiliary variable method](http://arxiv.org/abs/1604.08102)  
+Dennis Prangle and Richard G. Everitt
+  - Technical report
 
 - [Lazy ABC](http://link.springer.com/article/10.1007/s11222-014-9544-3) *Statistics and Computing*  
 Dennis Prangle
