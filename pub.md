@@ -98,6 +98,8 @@ Software packages
 Talks and posters
 -----------------
 
+- [A rare event approach to high dimensional ABC](http://www.birs.ca/events/2017/5-day-workshops/17w5025/videos/watch/201702231535-Prangle.html)  
+Video from BIRS workshop (2017).
 - [Approximate Bayesian computation](https://www.dropbox.com/s/gyvmvrk8hg038h7/ABC_Dortmund.pdf)  
 Slides from IBS tutorial, giving a general overview of ABC (2014).
 - [Advances in approximate Bayesian computation for modelling biological data](https://www.dropbox.com/s/ymldljskmlhgjhu/IBC_DP.pdf)  
