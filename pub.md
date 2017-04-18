@@ -104,7 +104,7 @@ Slides from IBC conference, covering ABC model choice (2014).
 Video and slides from Isaac Newton Institute workshop (2014).
 - [Constructing ABC summary statistics: semi-automatic ABC](http://precedings.nature.com/documents/5959)  
 Slides from [ABC in London](http://www.bioinformatics.ic.ac.uk/abcil/index.html) meeting (2011).
-- [Faster R code using C](https://dl.dropboxusercontent.com/u/5302937/CinR.zip)  
+- [Faster R code using C](https://www.dropbox.com/s/9tmr3lg2z1my71i/CinR.zip)  
 Presentation material (2010)
   - Mainly of historical interest, but still a handy reference for myself!
   - Better options like [Rccp](http://www.rcpp.org/) are available now.

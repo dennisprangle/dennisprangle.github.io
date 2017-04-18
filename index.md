@@ -9,7 +9,7 @@ I'm a [lecturer in statistics](http://www.ncl.ac.uk/maths/staff/profile/dennis.p
 ## Resources
 
 - [Publications](pub.html)
-- [My CV](https://dl.dropboxusercontent.com/u/5302937/DennisPrangleCV.pdf)
+- [My CV](https://www.dropbox.com/s/qmyvas4mtr5fl6u/DennisPrangleCV.pdf)
 
 ## Blog posts list
 
@@ -18,4 +18,3 @@ I'm a [lecturer in statistics](http://www.ncl.ac.uk/maths/staff/profile/dennis.p
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
-
