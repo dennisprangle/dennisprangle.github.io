@@ -12,6 +12,9 @@ Papers
 
 ### Preprints
 
+- [gk: An R Package for the g-and-k and generalised g-and-h distributions](http://arxiv.org/abs/1706.06889)  
+Dennis Prangle
+
 - [Recalibration: A post-processing method for approximate Bayesian computation](http://arxiv.org/abs/1704.06374)  
 Guilherme Rodrigues, Dennis Prangle, Scott Sisson
 
