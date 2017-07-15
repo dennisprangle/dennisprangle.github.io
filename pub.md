@@ -15,15 +15,16 @@ Papers
 - [Recalibration: A post-processing method for approximate Bayesian computation](http://arxiv.org/abs/1704.06374)  
 Guilherme Rodrigues, Dennis Prangle, Scott Sisson
 
-- [A rare event approach to high dimensional Approximate Bayesian computation](https://arxiv.org/abs/1611.02492)  
-Dennis Prangle, Richard G. Everitt, Theodore Kypraios
-  - See also the [supporting code](https://github.com/dennisprangle/RareEventABC.jl).
-
 - [Summary statistics in Approximate Bayesian Computation](http://arxiv.org/abs/1512.05633)  
 Dennis Prangle
   - Preprint of a chapter to appear in the Handbook of ABC, edited by S. Sisson, Y. Fan, and M. Beaumont.
 
 ### 2017
+
+- [A rare event approach to high dimensional Approximate Bayesian computation](https://link.springer.com/article/10.1007/s11222-017-9764-4)
+*Statistics and Computing*  
+Dennis Prangle, Richard G. Everitt, Theodore Kypraios
+  - See also the [supporting code](https://github.com/dennisprangle/RareEventABC.jl).
 
 - [Adapting the ABC distance function](http://projecteuclid.org/euclid.ba/1460641065)
 *Bayesian Analysis*  
