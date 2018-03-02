@@ -108,7 +108,7 @@ Software packages
   - The package implements (1) methods to choose summary statistics (2) coverage property diagnostics.
   - See above for a 2015 R Journal paper explaining typical usage.
 
-- gk R package for the g-and-k and generalised g-and-h distributions. Available on [CRAN](http://cran.r-project.org/web/packages/gk) or [github](http://www.github.com/dennisprangle/gk). A related paper is being written...
+- gk R package for the g-and-k and generalised g-and-h distributions. Available on [CRAN](http://cran.r-project.org/web/packages/gk) or [github](http://www.github.com/dennisprangle/gk). A [related paper](http://arxiv.org/abs/1706.06889) is now available.
 
 Talks and posters
 -----------------
