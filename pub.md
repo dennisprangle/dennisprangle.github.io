@@ -12,6 +12,9 @@ Papers
 
 ### Preprints
 
+- [Black-box variational inference for stochastic differential equations](https://arxiv.org/abs/1802.03335)  
+Thomas Ryder, Andrew Golightly, A. Stephen McGough, Dennis Prangle
+
 - [gk: An R Package for the g-and-k and generalised g-and-h distributions](http://arxiv.org/abs/1706.06889)  
 Dennis Prangle
 
@@ -22,12 +25,17 @@ Guilherme Rodrigues, Dennis Prangle, Scott Sisson
 Dennis Prangle
   - Preprint of a chapter to appear in the Handbook of ABC, edited by S. Sisson, Y. Fan, and M. Beaumont.
 
-### 2017
+### 2018
+
+- [Taking error into account when fitting models using Approximate Bayesian Computation](http://onlinelibrary.wiley.com/doi/10.1002/eap.1656/full) *Ecological Applications*  
+Elske van der Vaart, Dennis Prangle, Richard M. Sibly
 
 - [A rare event approach to high dimensional Approximate Bayesian computation](https://link.springer.com/article/10.1007/s11222-017-9764-4)
 *Statistics and Computing*  
 Dennis Prangle, Richard G. Everitt, Theodore Kypraios
   - See also the [supporting code](https://github.com/dennisprangle/RareEventABC.jl).
+
+### 2017
 
 - [Adapting the ABC distance function](http://projecteuclid.org/euclid.ba/1460641065)
 *Bayesian Analysis*  
