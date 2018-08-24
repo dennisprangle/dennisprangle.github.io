@@ -12,20 +12,21 @@ Papers
 
 ### Preprints
 
-- [Black-box variational inference for stochastic differential equations](https://arxiv.org/abs/1802.03335)  
-Thomas Ryder, Andrew Golightly, A. Stephen McGough, Dennis Prangle
-
 - [gk: An R Package for the g-and-k and generalised g-and-h distributions](http://arxiv.org/abs/1706.06889)  
 Dennis Prangle
 
-- [Recalibration: A post-processing method for approximate Bayesian computation](http://arxiv.org/abs/1704.06374)  
+### 2018
+
+- [Recalibration: A post-processing method for approximate Bayesian computation](https://www.sciencedirect.com/science/article/pii/S0167947318300859) *Computational Statistics and Data Analysis*  
 Guilherme Rodrigues, Dennis Prangle, Scott Sisson
 
 - [Summary statistics in Approximate Bayesian Computation](http://arxiv.org/abs/1512.05633)  
 Dennis Prangle
-  - Preprint of a chapter to appear in the Handbook of ABC, edited by S. Sisson, Y. Fan, and M. Beaumont.
+  - Chapter in the Handbook of ABC, edited by S. Sisson, Y. Fan, and M. Beaumont.
 
-### 2018
+- [Black-box variational inference for stochastic differential equations](http://proceedings.mlr.press/v80/ryder18a.html) *ICML*  
+Thomas Ryder, Andrew Golightly, A. Stephen McGough, Dennis Prangle  
+![Paper image]({{ site.url }}/assets/LV_paths.gif "Lotka Volterra paths"){:height="300px" width="300px"}
 
 - [Taking error into account when fitting models using Approximate Bayesian Computation](http://onlinelibrary.wiley.com/doi/10.1002/eap.1656/full) *Ecological Applications*  
 Elske van der Vaart, Dennis Prangle, Richard M. Sibly
