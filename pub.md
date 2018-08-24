@@ -26,7 +26,7 @@ Dennis Prangle
 
 - [Black-box variational inference for stochastic differential equations](http://proceedings.mlr.press/v80/ryder18a.html) *ICML*  
 Thomas Ryder, Andrew Golightly, A. Stephen McGough, Dennis Prangle  
-![Paper image]({{ site.url }}/assets/LV_paths.gif "Lotka Volterra paths"){:height="300px" width="300px"}
+![Paper image]({{ site.url }}/assets/LV_paths.gif "Lotka Volterra paths"){:height="300px" width="450px"}
 
 - [Taking error into account when fitting models using Approximate Bayesian Computation](http://onlinelibrary.wiley.com/doi/10.1002/eap.1656/full) *Ecological Applications*  
 Elske van der Vaart, Dennis Prangle, Richard M. Sibly
