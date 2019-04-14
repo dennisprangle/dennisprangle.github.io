@@ -12,20 +12,30 @@ Papers
 
 ### Preprints
 
-- [Black-box variational inference for stochastic differential equations](https://arxiv.org/abs/1802.03335)  
-Thomas Ryder, Andrew Golightly, A. Stephen McGough, Dennis Prangle
+- [High dimensional optimal design using stochastic gradient optimisation and Fisher information gain](https://arxiv.org/abs/1904.05703)  
+Sophie Harbisher, Colin S. Gillespie, Dennis Prangle  
 
 - [gk: An R Package for the g-and-k and generalised g-and-h distributions](http://arxiv.org/abs/1706.06889)  
 Dennis Prangle
+  - To appear in *The R Journal*
 
-- [Recalibration: A post-processing method for approximate Bayesian computation](http://arxiv.org/abs/1704.06374)  
+### 2018
+
+- [Black-box autoregressive density estimation for state-space models](https://arxiv.org/abs/1811.08337)  
+Tom Ryder, Andrew Golighty, A. Stephen McGough, Dennis Prangle  
+   - NeurIPS workshop paper
+
+- [Recalibration: A post-processing method for approximate Bayesian computation](https://www.sciencedirect.com/science/article/pii/S0167947318300859)  
+*Computational Statistics & Data Analysis*
 Guilherme Rodrigues, Dennis Prangle, Scott Sisson
+
+- [Black-box variational inference for stochastic differential equations](https://arxiv.org/abs/1802.03335)  
+*International Conference on Machine Learning*  
+Thomas Ryder, Andrew Golightly, A. Stephen McGough, Dennis Prangle
 
 - [Summary statistics in Approximate Bayesian Computation](http://arxiv.org/abs/1512.05633)  
 Dennis Prangle
-  - Preprint of a chapter to appear in the Handbook of ABC, edited by S. Sisson, Y. Fan, and M. Beaumont.
-
-### 2018
+  - Chapter from the *Handbook of ABC*, edited by S. Sisson, Y. Fan, and M. Beaumont.
 
 - [Taking error into account when fitting models using Approximate Bayesian Computation](http://onlinelibrary.wiley.com/doi/10.1002/eap.1656/full) *Ecological Applications*  
 Elske van der Vaart, Dennis Prangle, Richard M. Sibly
@@ -68,7 +78,7 @@ Ceri G. Falys and Dennis Prangle
 
 ### 2014
 
-- [Lazier ABC](https://www.dropbox.com/s/b3d6d2vkgpzq8ze/lazier.pdf) Contributed NIPS workshop paper  
+- [Lazier ABC](https://www.dropbox.com/s/b3d6d2vkgpzq8ze/lazier.pdf) Contributed NeurIPS workshop paper  
 Dennis Prangle
   - Short 5 page paper summarising "Lazy ABC" plus some extensions.
   - This link is slightly more up to date than the arXiv version.
