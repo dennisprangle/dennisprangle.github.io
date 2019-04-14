@@ -22,20 +22,21 @@ Dennis Prangle
 ### 2018
 
 - [Black-box autoregressive density estimation for state-space models](https://arxiv.org/abs/1811.08337)  
-Tom Ryder, Andrew Golighty, A. Stephen McGough, Dennis Prangle  
+Thomas Ryder, Andrew Golighty, A. Stephen McGough, Dennis Prangle  
    - NeurIPS workshop paper
 
 - [Recalibration: A post-processing method for approximate Bayesian computation](https://www.sciencedirect.com/science/article/pii/S0167947318300859)  
-*Computational Statistics & Data Analysis*
+*Computational Statistics & Data Analysis*  
 Guilherme Rodrigues, Dennis Prangle, Scott Sisson
-
-- [Black-box variational inference for stochastic differential equations](https://arxiv.org/abs/1802.03335)  
-*International Conference on Machine Learning*  
-Thomas Ryder, Andrew Golightly, A. Stephen McGough, Dennis Prangle
 
 - [Summary statistics in Approximate Bayesian Computation](http://arxiv.org/abs/1512.05633)  
 Dennis Prangle
-  - Chapter from the *Handbook of ABC*, edited by S. Sisson, Y. Fan, and M. Beaumont.
+  - Chapter in the *Handbook of ABC*, edited by S. Sisson, Y. Fan, and M. Beaumont.
+
+- [Black-box variational inference for stochastic differential equations](https://arxiv.org/abs/1802.03335)  
+*International Conference on Machine Learning*  
+Thomas Ryder, Andrew Golightly, A. Stephen McGough, Dennis Prangle  
+![Paper image]({{ site.url }}/assets/LV_paths.gif "Lotka Volterra paths"){:height="300px" width="450px"}
 
 - [Taking error into account when fitting models using Approximate Bayesian Computation](http://onlinelibrary.wiley.com/doi/10.1002/eap.1656/full) *Ecological Applications*  
 Elske van der Vaart, Dennis Prangle, Richard M. Sibly
