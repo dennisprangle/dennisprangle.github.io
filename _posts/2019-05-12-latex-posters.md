@@ -18,8 +18,8 @@ See [this stack exchange answer](https://tex.stackexchange.com/questions/341/how
 
 A good place to start by editting an existing example such as [this template](http://www.latextemplates.com/template/jacobs-landscape-poster) or the one in this [blog post by Rob Hyndman](http://robjhyndman.com/hyndsight/beamer-poster/).
 When creating a poster you need to select a theme describing some style choices.
-The packages comes with some [defaults](https://github.com/deselaers/latex-beamerposter/tree/master/themes).
-For colleagues/students at Newcastle University, [here's a theme including the university logo](https://gist.github.com/dennisprangle/788783f6a7679f4dde7373b6dc21cb9e).
+The beamerposter package comes with some [defaults](https://github.com/deselaers/latex-beamerposter/tree/master/themes).
+For colleagues/students at Newcastle University, [here's a theme including the university logo](https://gist.github.com/dennisprangle/788783f6a7679f4dde7373b6dc21cb9e)
 (created by editting a theme passed down to me by a former colleague.)
 You'll need to download the logo separately.
 The exact file I used is at available [here](http://www.nodes.ac.uk/wp-content/themes/hotrod/img/logo/university/Newcastle_University.png) for example.
