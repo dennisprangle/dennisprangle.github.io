@@ -12,12 +12,21 @@ Papers
 
 ### Preprints
 
+- [Ensemble MCMC: Accelerating pseudo-marginal MCMC for state space sodels using the ensemble Kalman filter](https://arxiv.org/abs1906.02014)  
+Chris Drovandi, Richard Everitt, Andrew Golightly, Dennis Prangle
+
 - [High dimensional optimal design using stochastic gradient optimisation and Fisher information gain](https://arxiv.org/abs/1904.05703)  
 Sophie Harbisher, Colin S. Gillespie, Dennis Prangle  
 
 - [gk: An R Package for the g-and-k and generalised g-and-h distributions](http://arxiv.org/abs/1706.06889)  
 Dennis Prangle
   - To appear in *The R Journal*
+
+### 2019
+
+- [Optimality criteria for probabilistic numerical methods](https://arxiv.org/abs/1901.04326)  
+Chris. J. Oates, Jon Cockayne, Dennis Prangle, T.J. Sullivan, Mark Girolami  
+  - RICAM workshop proceedings
 
 ### 2018
 
