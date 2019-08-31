@@ -125,14 +125,14 @@ However we can compute an unbiased Monte Carlo estimate of its gradient,
 
 $$
 \begin{equation}
-\widehat{\nabla_\theta \mathcal{J}(\tau)} = \frac{1}{K} \sum_{k=1}^K \nabla_\theta \text{tr} \mathcal{I}(\theta^{(k)}, \tau).
+\widehat{\nabla_\tau \mathcal{J}(\tau)} = \frac{1}{K} \sum_{k=1}^K \nabla_\tau \text{tr} \mathcal{I}(\theta^{(k)}, \tau).
 \end{equation}
 $$
 
 where
 
 * The $$\theta^{(k)}$$s are samples from the prior.
-* $$\nabla_\theta$$ represents gradient with respect to $$\theta$$.
+* $$\nabla_\tau$$ represents gradient with respect to $$\tau$$.
 * $$\text{tr}$$ represents trace.
 * $$\mathcal{I}$$ is the Fisher information matrix.
 
@@ -141,7 +141,7 @@ Also the above is for the case where the trace of the Fisher information is easi
 See our paper for more details.)
 
 We can now use a powerful off-the-shelf method - stochastic gradient optimisation.
-We produce a sequence of $$\tau_i$$ values where $$\tau_{i+1}$$ equals $$\tau_i$$ plus a step in the direction of $$\widehat{\nabla_\theta \mathcal{J}(\tau_i)}$$.
+We produce a sequence of $$\tau_i$$ values where $$\tau_{i+1}$$ equals $$\tau_i$$ plus a step in the direction of $$\widehat{\nabla_\tau \mathcal{J}(\tau_i)}$$.
 These converge to a local maximum of $$\mathcal{J}(\tau)$$.
 
 [Lots of powerful adaptive stochastic gradient optimisation methods](http://ruder.io/optimizing-gradient-descent/) have recently been developed in the machine learning literature.
