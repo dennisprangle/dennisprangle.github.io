@@ -11,7 +11,7 @@ Myself, my Newcastle colleague [Colin Gillespie](https://twitter.com/csgillespie
 I thought this would be a good opportunity to blog about it while it's fresh in my mind.
 The paper is on **Bayesian experimental design**, and how to scale it up to higher dimensional problems at a reasonable cost.
 In this first blog post I'm going to describe our method.
-Then in a second part I'll explain some of the theory behind it.
+Then in a [second part](/research/2019/09/37/experimental_design_pt2) I'll explain some of the theory behind it.
 
 You can also have a look at our code for this project [on github](https://github.com/SophieHarbisher/SGO-FIG).
 
@@ -108,7 +108,7 @@ In both cases it's not necessary to infer the posterior.
 Utility functions which avoid in the posterior in this way have been [criticsed as being **pseudo-Bayesian**](https://onlinelibrary.wiley.com/doi/abs/10.1111/insr.12107) for not using the full information available from the data.
 However [Stephen Walker recently showed](https://www.sciencedirect.com/science/article/abs/pii/S0167715216000109) that it turns out this utility produces the same optimal designs as a **fully Bayesian** utility (i.e. one which is a posterior summary).
 Our paper extends this argument by giving a foundational Bayesian derivation of the FIG utility through decision theory.
-The details are in the second part of this blog post.
+The details are in the [second part](/research/2019/09/37/experimental_design_pt2) of this blog post.
 
 ## Optimisation
 
@@ -191,7 +191,7 @@ This checks for multiple local maxima.
 It's unclear whether repeated design points should be regarded as problematic or not.
 For example [Binois et al](https://amstat.tandfonline.com/doi/abs/10.1080/00401706.2018.1469433) recently argued that replicated observation times can be highly informative.
 Alternatively the tendency for replication in this example could represent some undesirable features of the utility function.
-I'll discuss this further in the second part of this blog post.
+I'll discuss this further in the [second part](/research/2019/09/37/experimental_design_pt2) of this blog post.
 
 ## Future research directions
 
