@@ -140,6 +140,7 @@ E_{X_1|y_{1:t}, \theta}[\nabla \log q(X_1)]
 + \sum_{t=1}^{T-1} E_{X_t, X_{t+1} | y_{1:t}, \theta}[\nabla \log m(X_t, X_{t+1})]
 + \sum_{t=1}^T E_{X_t | y_{1:t}, \theta}[\nabla \log g_t(y_t|X_t, y_{1:t-1})]
 $$
+WHICH IS ACTUALLY VERY SIMILAR TO THE E-M ALGORITHM!
 So we can get an expression for $\nabla \ell(\theta)$ if we can work output
 marginal and bivariate posteriors of the states.
 This can be done by the **forward-backward algorithm** described in the following sections.
@@ -205,6 +206,14 @@ Equivalently $\beta_T$ is a vector of 1s,
 and $\beta_t = T (\beta_t \odot g_t)$.
 
 Again it can be checked using Bayes theorem that this recursion gives the desired quantity.
+
+## Numerical considerations
+
+For high dimensional data, observation densities can become very small
+and lead to numerical underflow.
+This can easily be avoided by replacing each vector of observation densities by a rescaled version.
+For example replace $g_t$ with $g_t / max(g_t)$.
+It can easily be checked that all the rescaling cancels and does not affect the final results.
 
 ## Marginal probabilities
 
