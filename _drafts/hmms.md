@@ -134,14 +134,18 @@ $$
 That is, we need to find the gradient of the complete data log-likelihood,
 and then take the expectation with respect to $X_{1:T}|y_{1:T},\theta$ --
 the posterior distribution of the states given the observations and parameters.
-This gives
+Since $X$ is discrete, expectation is a summation operation and it can be swapped with the gradient operation.
+This gives:
 $$
-E_{X_1|y_{1:t}, \theta}[\nabla \log q(X_1)]
-+ \sum_{t=1}^{T-1} E_{X_t, X_{t+1} | y_{1:t}, \theta}[\nabla \log m(X_t, X_{t+1})]
-+ \sum_{t=1}^T E_{X_t | y_{1:t}, \theta}[\nabla \log g_t(y_t|X_t, y_{1:t-1})]
+\begin{align*}
+\nabla \left\{ E_{X_1|y_{1:t}, \theta}[\log q(X_1)]
++ \sum_{t=1}^{T-1} E_{X_t, X_{t+1} | y_{1:t}, \theta}[\log m(X_t, X_{t+1})] \\
++ \sum_{t=1}^T E_{X_t | y_{1:t}, \theta}[\log g_t(y_t|X_t, y_{1:t-1})] \right\}
+\end{align*}
 $$
 WHICH IS ACTUALLY VERY SIMILAR TO THE E-M ALGORITHM!
-So we can get an expression for $\nabla \ell(\theta)$ if we can work output
+The gradient here can be computed using your favourite automatic differentiation tool.
+So we can get an expression for $\nabla \ell(\theta)$ if we can work out
 marginal and bivariate posteriors of the states.
 This can be done by the **forward-backward algorithm** described in the following sections.
 

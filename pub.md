@@ -12,19 +12,38 @@ Papers
 
 ### Preprints
 
+- [Ensemble MCMC: Accelerating pseudo-marginal MCMC for state space sodels using the ensemble Kalman filter](https://arxiv.org/abs1906.02014)  
+Chris Drovandi, Richard Everitt, Andrew Golightly, Dennis Prangle
+
+- [High dimensional optimal design using stochastic gradient optimisation and Fisher information gain](https://arxiv.org/abs/1904.05703)  
+Sophie Harbisher, Colin S. Gillespie, Dennis Prangle  
+
 - [gk: An R Package for the g-and-k and generalised g-and-h distributions](http://arxiv.org/abs/1706.06889)  
 Dennis Prangle
+  - To appear in *The R Journal*
+
+### 2019
+
+- [Optimality criteria for probabilistic numerical methods](https://arxiv.org/abs/1901.04326)  
+Chris. J. Oates, Jon Cockayne, Dennis Prangle, T.J. Sullivan, Mark Girolami  
+  - RICAM workshop proceedings
 
 ### 2018
 
-- [Recalibration: A post-processing method for approximate Bayesian computation](https://www.sciencedirect.com/science/article/pii/S0167947318300859) *Computational Statistics and Data Analysis*  
+- [Black-box autoregressive density estimation for state-space models](https://arxiv.org/abs/1811.08337)  
+Thomas Ryder, Andrew Golighty, A. Stephen McGough, Dennis Prangle  
+   - NeurIPS workshop paper
+
+- [Recalibration: A post-processing method for approximate Bayesian computation](https://www.sciencedirect.com/science/article/pii/S0167947318300859)  
+*Computational Statistics & Data Analysis*  
 Guilherme Rodrigues, Dennis Prangle, Scott Sisson
 
 - [Summary statistics in Approximate Bayesian Computation](http://arxiv.org/abs/1512.05633)  
 Dennis Prangle
-  - Chapter in the Handbook of ABC, edited by S. Sisson, Y. Fan, and M. Beaumont.
+  - Chapter in the *Handbook of ABC*, edited by S. Sisson, Y. Fan, and M. Beaumont.
 
-- [Black-box variational inference for stochastic differential equations](http://proceedings.mlr.press/v80/ryder18a.html) *ICML*  
+- [Black-box variational inference for stochastic differential equations](https://arxiv.org/abs/1802.03335)  
+*International Conference on Machine Learning*  
 Thomas Ryder, Andrew Golightly, A. Stephen McGough, Dennis Prangle  
 ![Paper image]({{ site.url }}/assets/LV_paths.gif "Lotka Volterra paths"){:height="300px" width="450px"}
 
@@ -69,7 +88,7 @@ Ceri G. Falys and Dennis Prangle
 
 ### 2014
 
-- [Lazier ABC](https://www.dropbox.com/s/b3d6d2vkgpzq8ze/lazier.pdf) Contributed NIPS workshop paper  
+- [Lazier ABC](https://www.dropbox.com/s/b3d6d2vkgpzq8ze/lazier.pdf) Contributed NeurIPS workshop paper  
 Dennis Prangle
   - Short 5 page paper summarising "Lazy ABC" plus some extensions.
   - This link is slightly more up to date than the arXiv version.
