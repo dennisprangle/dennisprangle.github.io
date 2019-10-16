@@ -11,7 +11,7 @@ Myself, my Newcastle colleague [Colin Gillespie](https://twitter.com/csgillespie
 I thought this would be a good opportunity to blog about it while it's fresh in my mind.
 The paper is on **Bayesian experimental design**, and how to scale it up to higher dimensional problems at a reasonable cost.
 In this first blog post I'm going to describe our method.
-Then in a [second part](/research/2019/09/37/experimental_design_pt2) I'll explain some of the theory behind it.
+Then in a [second part](/research/2019/09/07/experimental_design_pt2) I'll explain some of the theory behind it.
 
 You can also have a look at our code for this project [on github](https://github.com/SophieHarbisher/SGO-FIG).
 
@@ -33,7 +33,7 @@ Similar settings also appear whenever a decision must be made about how to colle
 * Where to evaluate a function for numerical integration.
 * What parameter settings to use for runs of expensive climate simulators.
 
-So classical design on experiments has a strong overlap with modern tasks in machine learning (e.g. active and reinforcement learning), probabilistic numerics and uncertainty quantification.
+So classical design of experiments has a strong overlap with modern tasks in machine learning (e.g. active and reinforcement learning), probabilistic numerics and uncertainty quantification.
 
 Design of experiments (**DoE**) has a long history in statistical research.
 The classic approach dates back to at least [R A Fisher's work in the 1920s-30s](https://en.wikipedia.org/wiki/The_Design_of_Experiments).
