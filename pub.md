@@ -12,13 +12,24 @@ Papers
 
 ### Preprints
 
+- [Distilling importance sampling](https://arxiv.org/abs/1910.03632)  
+Dennis Prangle
+  - Work in progress  
+  ![Paper image]({{ site.url }}/assets/sin.gif "sinusoidal model inference"){:height="350px" width="450px"}
+
+- [Scalable approximate inference for state space models with normalising flows](https://arxiv.org/abs/1910.00879)  
+Tom Ryder, Andrew Golightly, Isaac Matthews, Dennis Prangle
+
+- [Variational bridge constructs for grey box modelling with Gaussian Processes](https://arxiv.org/abs/1906.09199)  
+Wil O. C. Ward, Tom Ryder, Dennis Prangle, Mauricio A. Álvarez
+
 - [Ensemble MCMC: Accelerating pseudo-marginal MCMC for state space sodels using the ensemble Kalman filter](https://arxiv.org/abs1906.02014)  
 Chris Drovandi, Richard Everitt, Andrew Golightly, Dennis Prangle
 
 - [High dimensional optimal design using stochastic gradient optimisation and Fisher information gain](https://arxiv.org/abs/1904.05703)  
 Sophie Harbisher, Colin S. Gillespie, Dennis Prangle  
 
-- [gk: An R Package for the g-and-k and generalised g-and-h distributions](http://arxiv.org/abs/1706.06889)  
+- [gk: An R Package for the g-and-k and generalised g-and-h distributions](https://arxiv.org/abs/1706.06889)  
 Dennis Prangle
   - To appear in *The R Journal*
 
@@ -39,18 +50,19 @@ Thomas Ryder, Andrew Golighty, A. Stephen McGough, Dennis Prangle
 Guilherme Rodrigues, Dennis Prangle, Scott Sisson
 
 - [Summary statistics in Approximate Bayesian Computation](http://arxiv.org/abs/1512.05633)  
+Chapter in the *Handbook of ABC*, edited by S. Sisson, Y. Fan, and M. Beaumont  
 Dennis Prangle
-  - Chapter in the *Handbook of ABC*, edited by S. Sisson, Y. Fan, and M. Beaumont.
 
 - [Black-box variational inference for stochastic differential equations](https://arxiv.org/abs/1802.03335)  
 *International Conference on Machine Learning*  
 Thomas Ryder, Andrew Golightly, A. Stephen McGough, Dennis Prangle  
 ![Paper image]({{ site.url }}/assets/LV_paths.gif "Lotka Volterra paths"){:height="300px" width="450px"}
 
-- [Taking error into account when fitting models using Approximate Bayesian Computation](http://onlinelibrary.wiley.com/doi/10.1002/eap.1656/full) *Ecological Applications*  
+- [Taking error into account when fitting models using Approximate Bayesian Computation](http://onlinelibrary.wiley.com/doi/10.1002/eap.1656/full)  
+*Ecological Applications*  
 Elske van der Vaart, Dennis Prangle, Richard M. Sibly
 
-- [A rare event approach to high dimensional Approximate Bayesian computation](https://link.springer.com/article/10.1007/s11222-017-9764-4)
+- [A rare event approach to high dimensional Approximate Bayesian computation](https://link.springer.com/article/10.1007/s11222-017-9764-4)  
 *Statistics and Computing*  
 Dennis Prangle, Richard G. Everitt, Theodore Kypraios
   - See also the [supporting code](https://github.com/dennisprangle/RareEventABC.jl).
@@ -93,29 +105,31 @@ Dennis Prangle
   - Short 5 page paper summarising "Lazy ABC" plus some extensions.
   - This link is slightly more up to date than the arXiv version.
 
-- [Diagnostic tools of approximate Bayesian computation using the coverage property](http://onlinelibrary.wiley.com/doi/10.1111/anzs.12087/abstract) *Australian & New Zealand Journal of Statistics*  
+- [Diagnostic tools of approximate Bayesian computation using the coverage property](http://onlinelibrary.wiley.com/doi/10.1111/anzs.12087/abstract)  
+*Australian & New Zealand Journal of Statistics*  
 Dennis Prangle, Micheal Blum, Gordana Popovic, Scott Sisson
   - Methods implemented by the abctools R package (see below).
 
-- [Semi-automatic selection of summary statistics for ABC model choice](http://www.degruyter.com/view/j/sagmb.2014.13.issue-1/sagmb-2013-0012/sagmb-2013-0012.xml)
+- [Semi-automatic selection of summary statistics for ABC model choice](http://www.degruyter.com/view/j/sagmb.2014.13.issue-1/sagmb-2013-0012/sagmb-2013-0012.xml)  
 *Statistical Applications in Genetics and Molecular Biology*  
 Dennis Prangle, Paul Fearnhead, Murray P. Cox, Patrick J. Biggs, Nigel P. French
 
 ### 2013
 
-- [A comparative review of dimension reduction methods in approximate Bayesian computation](http://projecteuclid.org/euclid.ss/1369147911)
+- [A comparative review of dimension reduction methods in approximate Bayesian computation](http://projecteuclid.org/euclid.ss/1369147911)  
 *Statistical Science*  
 Micheal Blum, Matt Nunes, Dennis Prangle, Scott Sisson
 
 ### 2012
 
-- [Constructing summary statistics for approximate Bayesian computation: semi-automatic ABC](http://onlinelibrary.wiley.com/doi/10.1111/j.1467-9868.2011.01010.x/abstract)
+- [Constructing summary statistics for approximate Bayesian computation: semi-automatic ABC](http://onlinelibrary.wiley.com/doi/10.1111/j.1467-9868.2011.01010.x/abstract)  
 *Journal of the Royal Statistical Society Series B*  
 Paul Fearnhead, Dennis Prangle
   - See my thesis below for supplementary material.
 
 ### 2011
-- [Summary statistics and sequential methods for approximate Bayesian computation](https://www.dropbox.com/s/wbvtj518ztwvbxu/thesis_DP.pdf) *PhD thesis*  
+- [Summary statistics and sequential methods for approximate Bayesian computation](https://www.dropbox.com/s/wbvtj518ztwvbxu/thesis_DP.pdf)  
+*PhD thesis*  
 Dennis Prangle
   - [Version without hyperlinks](https://www.dropbox.com/s/9xe2leu4nz6i8h5/thesis_DP_nohyper.pdf).  
 ![Thesis image]({{ site.url }}/assets/thesis.jpg "Thesis binding")
