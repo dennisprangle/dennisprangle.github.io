@@ -203,7 +203,7 @@ The logarithmic scoring rule $$S(q,\theta) = -\log q(\theta)$$ is the unique str
 
 Other rules are possible if locality is relaxed slightly to allow $$S(q,\theta)$$ to depend on derivatives of $$q(\theta)$$.
 Allowing $$k$$th derivatives is called locality of order $$k$$.
-An order-2 strictly proper scoring rule is the [**Hyvärinen score**](LINK).
+An order-2 strictly proper scoring rule is the [**Hyvärinen score**](http://www.jmlr.org/papers/v6/hyvarinen05a.html).
 (I'll omit its formula as the details aren't needed here.)
 
 The logarithmic and Hyvärinen score seem good candidates to use to create a base utility.
