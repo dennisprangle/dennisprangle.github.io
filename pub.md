@@ -13,31 +13,40 @@ Papers
 ### Preprints
 
 - [Distilling importance sampling](https://arxiv.org/abs/1910.03632)  
-Dennis Prangle
-  - Work in progress  
+Dennis Prangle  
   ![Paper image]({{ site.url }}/assets/sin.gif "sinusoidal model inference"){:height="350px" width="450px"}
 
 - [Scalable approximate inference for state space models with normalising flows](https://arxiv.org/abs/1910.00879)  
 Tom Ryder, Andrew Golightly, Isaac Matthews, Dennis Prangle
 
-- [Variational bridge constructs for grey box modelling with Gaussian Processes](https://arxiv.org/abs/1906.09199)  
-Wil O. C. Ward, Tom Ryder, Dennis Prangle, Mauricio A. Álvarez
-
-- [Ensemble MCMC: Accelerating pseudo-marginal MCMC for state space sodels using the ensemble Kalman filter](https://arxiv.org/abs1906.02014)  
-Chris Drovandi, Richard Everitt, Andrew Golightly, Dennis Prangle
-
-- [High dimensional optimal design using stochastic gradient optimisation and Fisher information gain](https://arxiv.org/abs/1904.05703)  
+- [Bayesian experimental design without posterior calculations: an adversarial approach](https://arxiv.org/abs/1904.05703)  
 Sophie Harbisher, Colin S. Gillespie, Dennis Prangle  
 
+### 2021
+
+- [Ensemble MCMC: Accelerating pseudo-marginal MCMC for state space models using the ensemble Kalman filter](https://arxiv.org/abs/1906.02014)  
+*Bayesian Analysis*  
+Chris Drovandi, Richard Everitt, Andrew Golightly, Dennis Prangle
+
+- [Measure transport with kernel Stein discrepancy](https://arxiv.org/abs/2010.11779)  
+*Intenational Conference on Artificial Intelligence and Statistics*  
+Matthew Fisher, Tui Nolan, Matthew Graham, Dennis Prangle, Chris J Oates
+
+### 2020
+
+- [Black-box inference for non-linear latent force models](https://arxiv.org/abs/1906.09199)  
+*Intenational Conference on Artificial Intelligence and Statistics*  
+Wil O. C. Ward, Tom Ryder, Dennis Prangle, Mauricio A. Álvarez  
+
 - [gk: An R Package for the g-and-k and generalised g-and-h distributions](https://arxiv.org/abs/1706.06889)  
+*The R Journal*  
 Dennis Prangle
-  - To appear in *The R Journal*
 
 ### 2019
 
 - [Optimality criteria for probabilistic numerical methods](https://arxiv.org/abs/1901.04326)  
+*RICAM workshop proceedings*  
 Chris. J. Oates, Jon Cockayne, Dennis Prangle, T.J. Sullivan, Mark Girolami  
-  - RICAM workshop proceedings
 
 ### 2018
 
