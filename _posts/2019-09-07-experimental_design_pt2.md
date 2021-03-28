@@ -7,7 +7,7 @@ tags: [Bayesian statistics, Experimental design]
 ---
 {% include JB/setup %}
 
-**Edit: This post is now very out of date! See version 3+ of the paper onwards for a new approach.**
+**Edit: This post is now very out of date! See version 3+ of the paper for a new approach.**
 
 This is the second part of a blog post on a [preprint](https://arxiv.org/abs/1904.05703v2) by [Sophie Harbisher](https://www.ncl.ac.uk/maths-physics/postgraduate/current/pgrprofiles/harbishersophie.html),
 [Colin Gillespie](https://twitter.com/csgillespie) and me.

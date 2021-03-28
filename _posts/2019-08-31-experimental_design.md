@@ -7,7 +7,7 @@ tags: [Bayesian statistics, Experimental design]
 ---
 {% include JB/setup %}
 
-**Edit: This post is now very out of date! See version 3+ of the paper onwards for a new approach.**
+**Edit: This post is now very out of date! See version 3+ of the paper for a new approach.**
 
 Myself, my Newcastle colleague [Colin Gillespie](https://twitter.com/csgillespie) and our PhD student [Sophie Harbisher](https://www.ncl.ac.uk/maths-physics/postgraduate/current/pgrprofiles/harbishersophie.html) recently uploaded a [second version of a paper](https://arxiv.org/abs/1904.05703v2) to arxiv.
 I thought this would be a good opportunity to blog about it while it's fresh in my mind.
