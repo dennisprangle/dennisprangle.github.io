@@ -7,7 +7,9 @@ tags: [Bayesian statistics, Experimental design]
 ---
 {% include JB/setup %}
 
-This is the second part of a blog post on a [preprint](https://arxiv.org/abs/1904.05703) by [Sophie Harbisher](https://www.ncl.ac.uk/maths-physics/postgraduate/current/pgrprofiles/harbishersophie.html),
+**Edit: This post is now very out of date! See version 3+ of the paper onwards for a new approach.**
+
+This is the second part of a blog post on a [preprint](https://arxiv.org/abs/1904.05703v2) by [Sophie Harbisher](https://www.ncl.ac.uk/maths-physics/postgraduate/current/pgrprofiles/harbishersophie.html),
 [Colin Gillespie](https://twitter.com/csgillespie) and me.
 The [first part](/research/2019/08/31/experimental_design) was about the computational benefits of using the "Fisher information gain" (trace of the Fisher information matrix)
 as a utility function in Bayesian experimental design.
