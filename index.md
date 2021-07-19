@@ -4,7 +4,15 @@ title: Dennis Prangle's home page
 ---
 {% include JB/setup %}
 
-I'm a [lecturer in statistics](http://www.ncl.ac.uk/maths/staff/profile/dennis.prangle) at the University of Newcastle where I research methods for computational and Bayesian statistics, especially [likelihood-free](https://en.wikipedia.org/wiki/Approximate_Bayesian_computation) approaches.
+I'm a [senior lecturer in statistics](http://www.bristolmathsresearch.org/members-of-the-institute-for-statistical-science) at the University of Bristol.
+
+My current research is on the interface between Bayesian statistics and machine learning.
+I am particularly interested in developing approximate inference methods such as [approximate Bayesian computation](https://en.wikipedia.org/wiki/Approximate_Bayesian_computation) approaches and **variational inference**.
+One application is to **likelihood-free inference**, where simulation of data is possible but the likelihood function is unavailable.
+Another is to **stochastic differential equations**
+I've worked on applications to population genetics, physics, ecology and epidemiology.
+Another research interest is **experimental design** and how to quickly derive effective high dimensional designs.
+
 
 ## Resources
 
