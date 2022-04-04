@@ -25,6 +25,11 @@ Sophie Harbisher, Colin S. Gillespie, Dennis Prangle
 
 ### 2021
 
+- [Emulating computer experiments of transport infrastructure slope stability
+using Gaussian processes and Bayesian inference](https://doi.org/10.1017/dce.2021.14)
+*Data Centric Engineering*
+Aleksandra Svalova, Peter Helm, Dennis Prangle, Mohamed Rouainia, Stephanie Glendinning, Darren J Wilkinson
+
 - [The neural moving average model for scalable variational inference of state space models](https://proceedings.mlr.press/v161/ryder21a.html)__
 *Uncertainty in Artificial Intelligence*
 Tom Ryder, Andrew Golightly, Isaac Matthews, Dennis Prangle
