@@ -20,18 +20,18 @@ Dennis Prangle
 ### 2022
 
 - [Bayesian experimental design without posterior calculations: an adversarial approach](https://projecteuclid.org/journals/bayesian-analysis/advance-publication/Bayesian-Experimental-Design-Without-Posterior-Calculations-An-Adversarial-Approach/10.1214/22-BA1306.full)  
-*Bayesian Analysis*
+*Bayesian Analysis*  
 Sophie Harbisher, Colin S. Gillespie, Dennis Prangle  
 
 ### 2021
 
 - [Emulating computer experiments of transport infrastructure slope stability
 using Gaussian processes and Bayesian inference](https://doi.org/10.1017/dce.2021.14)
-*Data Centric Engineering*
+*Data Centric Engineering*  
 Aleksandra Svalova, Peter Helm, Dennis Prangle, Mohamed Rouainia, Stephanie Glendinning, Darren J Wilkinson
 
-- [The neural moving average model for scalable variational inference of state space models](https://proceedings.mlr.press/v161/ryder21a.html)__
-*Uncertainty in Artificial Intelligence*
+- [The neural moving average model for scalable variational inference of state space models](https://proceedings.mlr.press/v161/ryder21a.html)  
+*Uncertainty in Artificial Intelligence*  
 Tom Ryder, Andrew Golightly, Isaac Matthews, Dennis Prangle
 
 - [Ensemble MCMC: Accelerating pseudo-marginal MCMC for state space models using the ensemble Kalman filter](https://arxiv.org/abs/1906.02014)  
