@@ -5,6 +5,7 @@ description: "List of my publications"
 ---
 {% include JB/setup %}
 
+Below are my "main" publications. I've left out a few things where I'm a minor coauthor. For a complete list see [my google scholar page](https://scholar.google.com/citations?hl=en&user=rJouD3QAAAAJ).
 Please email me for copies of anything below that you cannot access.
 
 Papers
@@ -16,13 +17,17 @@ Papers
 Dennis Prangle  
   ![Paper image]({{ site.url }}/assets/sin.gif "sinusoidal model inference"){:height="350px" width="450px"}
 
-- [Scalable approximate inference for state space models with normalising flows](https://arxiv.org/abs/1910.00879)  
-Tom Ryder, Andrew Golightly, Isaac Matthews, Dennis Prangle
+### 2022
 
-- [Bayesian experimental design without posterior calculations: an adversarial approach](https://arxiv.org/abs/1904.05703)  
+- [Bayesian experimental design without posterior calculations: an adversarial approach](https://projecteuclid.org/journals/bayesian-analysis/advance-publication/Bayesian-Experimental-Design-Without-Posterior-Calculations-An-Adversarial-Approach/10.1214/22-BA1306.full)  
+*Bayesian Analysis*
 Sophie Harbisher, Colin S. Gillespie, Dennis Prangle  
 
 ### 2021
+
+- [The neural moving average model for scalable variational inference of state space models](https://proceedings.mlr.press/v161/ryder21a.html)__
+*Uncertainty in Artificial Intelligence*
+Tom Ryder, Andrew Golightly, Isaac Matthews, Dennis Prangle
 
 - [Ensemble MCMC: Accelerating pseudo-marginal MCMC for state space models using the ensemble Kalman filter](https://arxiv.org/abs/1906.02014)  
 *Bayesian Analysis*  
