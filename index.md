@@ -11,7 +11,7 @@ I am particularly interested in developing approximate inference methods such as
 One application is to **likelihood-free inference**, where simulation of data is possible but the likelihood function is unavailable.
 Another is to **stochastic differential equations**
 I've worked on applications to population genetics, physics, ecology and epidemiology.
-Another research interest is **experimental design** and how to quickly derive effective high dimensional designs.
+I'm also interested in **experimental design** and how to quickly derive effective high dimensional designs.
 
 
 ## Resources
