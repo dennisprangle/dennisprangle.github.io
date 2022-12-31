@@ -11,10 +11,11 @@ Please email me for copies of anything below that you cannot access.
 Papers
 ------
 
-### Preprints
+### 2023
 
-- [Distilling importance sampling](https://arxiv.org/abs/1910.03632)  
-Dennis Prangle  
+- [Distilling importance sampling for likelihood-free inference](https://arxiv.org/abs/1910.03632)  
+*Journal of Computational and Graphical Statistics* (to appear)  
+Dennis Prangle and Cecilia Viscardi  
   ![Paper image]({{ site.url }}/assets/sin.gif "sinusoidal model inference"){:height="350px" width="450px"}
 
 ### 2022
@@ -26,7 +27,7 @@ Sophie Harbisher, Colin S. Gillespie, Dennis Prangle
 ### 2021
 
 - [Emulating computer experiments of transport infrastructure slope stability
-using Gaussian processes and Bayesian inference](https://doi.org/10.1017/dce.2021.14)
+using Gaussian processes and Bayesian inference](https://doi.org/10.1017/dce.2021.14)  
 *Data Centric Engineering*  
 Aleksandra Svalova, Peter Helm, Dennis Prangle, Mohamed Rouainia, Stephanie Glendinning, Darren J Wilkinson
 
@@ -94,7 +95,7 @@ Dennis Prangle
   - See also the [code used in the paper](https://github.com/dennisprangle/ABCDistances.jl).  
 ![Paper image]({{ site.url }}/assets/adapting_ABC_distance.jpg "Distance adaption"){:height="300px" width="300px"}
 
-- [A tutorial introduction to Bayesian inference for stochastic epidemic models using Approximate Bayesian Computation](http://www.sciencedirect.com/science/article/pii/S0025556416300839)
+- [A tutorial introduction to Bayesian inference for stochastic epidemic models using Approximate Bayesian Computation](http://www.sciencedirect.com/science/article/pii/S0025556416300839)  
 *Mathematical Biosciences*  
 Theodore Kypraios, Peter Neal and Dennis Prangle
   - See also the [supporting code](https://github.com/kypraios/epiABC).
@@ -105,16 +106,19 @@ Theodore Kypraios, Peter Neal and Dennis Prangle
 Dennis Prangle and Richard G. Everitt
   - Technical report
 
-- [Lazy ABC](http://link.springer.com/article/10.1007/s11222-014-9544-3) *Statistics and Computing*  
+- [Lazy ABC](http://link.springer.com/article/10.1007/s11222-014-9544-3)  
+*Statistics and Computing*  
 Dennis Prangle
   - See also [blog post](https://dennisprangleblog.wordpress.com/2014/06/02/lazy-abc), [example code](https://github.com/dennisprangle/lazyABCexample) and summary paper "Lazier ABC".
 
 ### 2015
 
-- [abctools: an R package for tuning approximate Bayesian computation analyses](https://journal.r-project.org/archive/2015-2/nunes-prangle.pdf) *The R Journal*  
+- [abctools: an R package for tuning approximate Bayesian computation analyses](https://journal.r-project.org/archive/2015-2/nunes-prangle.pdf)  
+*The R Journal*  
 Matthew Nunes and Dennis Prangle
 
-- [The identification of individuals of advanced age using degeneration of the sternal end of the clavicle](http://onlinelibrary.wiley.com/doi/10.1002/ajpa.22639/full) *American journal of physical anthropology*  
+- [The identification of individuals of advanced age using degeneration of the sternal end of the clavicle](http://onlinelibrary.wiley.com/doi/10.1002/ajpa.22639/full)  
+*American journal of physical anthropology*  
 Ceri G. Falys and Dennis Prangle
 
 ### 2014
@@ -178,7 +182,7 @@ Video and slides from Isaac Newton Institute workshop (2014).
 Slides from [ABC in London](http://www.bioinformatics.ic.ac.uk/abcil/index.html) meeting (2011).
 - [Faster R code using C](https://www.dropbox.com/s/9tmr3lg2z1my71i/CinR.zip)  
 Presentation material (2010)
-  - Mainly of historical interest, but still a handy reference for myself!
+  - Only of historical interest, but still occasionally a handy reference for myself!
   - Better options like [Rccp](http://www.rcpp.org/) are available now.
 
 
