@@ -6,7 +6,7 @@ category: research
 tags: [Bayesian statistics, ABC]
 ---
 
-The material in this blog post is planned to eventually be the appendix of a paper,
+The material in this blog post is planned to eventually be an appendix of a paper,
 but I thought I'd post it here separately as it's hopefully of some independent interest.
 Also, this draft is a good way to check for errors - let me know if you spot any!
 
@@ -144,7 +144,7 @@ prove the convergence of ABC posterior expectations for a uniform kernel.
 
 * [Bernton et al (2019)]( https://doi.org/10.1111/rssb.12312) (Proposition 3.1) prove ABC posterior convergence
 following the approach of Rubio and Johansen, but under different conditions relevant to their purposes.
-Amongst other authors, they also consider a different asymptotic regime: $n \to \infty$ (large number of observations).
+Amongst other authors, they also consider a different asymptotic regime: $$n \to \infty$$ (large number of observations).
 
 ## Approximations of the identity
 
