@@ -51,11 +51,17 @@ $$
 
 noting that $$Z(y_0) = Z$$ and $$\int Z(y) dy = 1$$.
 
-**Remark:**
-I think all the results below also hold for discrete $$\theta$$ and $$y$$ distributions.
+**Remarks:**
+
+* I think all the results below also hold for discrete $$\theta$$ and $$y$$ distributions.
 I think it's also fine for $$p(\cdot)$$ to be a density with respect to a more general measure
 but I'm not whether this is the case for $$f(\cdot|\theta)$$.
 There are some comments below on where the proof needs modification for these cases.
+* **Edit May 2023:** A case not covered by this proof is when $$y$$ is continuous
+but $$y | \theta$$ is singular with respect to Lebesgue measure.
+This can occur if a component of $$y$$ is a deterministic function of $$\theta$$,
+and can produce a posterior which is singular with respect to the prior,
+thus requiring more sophisticated measure theoretic tools.
 
 ## ABC posterior and likelihood
 
