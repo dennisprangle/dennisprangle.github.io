@@ -99,7 +99,7 @@ $$
 K_G(y) = \exp[-\tfrac{1}{2} ||y||^2] / k_G
 $$
 
-where $$k_N = (2 \pi)^{n/2}$$.
+where $$k_G = (2 \pi)^{n/2}$$.
 
 **Remarks:**
 
