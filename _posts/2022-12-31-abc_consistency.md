@@ -190,6 +190,7 @@ $$K_\epsilon(y) = \epsilon^{-n} K(y/\epsilon)$$.
 One application of this is to adaptive ABC distance functions (as in [Prangle 2017](https://doi.org/10.1214/16-BA1002)).
 * The full theorem statement in Stein and Shakarchi has more details on the definition of an AOTI kernel,
 and which $$y_0$$ points the theorem holds for (the [Lebesgue points](https://en.wikipedia.org/wiki/Lebesgue_point) of $$g$$).
+* **Edit June 2023:** In the context of AOTI, $$K_\epsilon$$ is sometimes known as a [**mollifier**](https://en.wikipedia.org/wiki/Mollifier).
 
 ## ABC convergence proof part 1: pointwise convergence of the ABC likelihood
 
