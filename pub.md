@@ -13,6 +13,11 @@ Papers
 
 ### 2024
 
+- [Optimal combination of composite likelihoods using approximate Bayesian computation with application to state-space models](https://arxiv.org/abs/2404.02313)
+*arXiv preprint*  
+Wentao Li, Rosabeth White and Dennis Prangle
+
+
 - [Flexible Tails for Normalizing Flows](https://arxiv.org/abs/2406.16971)
 *arXiv preprint*  
 Tennessee Hickling and Dennis Prangle
@@ -23,8 +28,8 @@ Christian Robert and Dennis Prangle
 
 ### 2023
 
-- [Distilling importance sampling for likelihood-free inference](https://arxiv.org/abs/1910.03632)  
-*Journal of Computational and Graphical Statistics* (to appear)  
+- [Distilling importance sampling for likelihood-free inference](https://doi.org/10.1080/10618600.2023.2175688)  
+*Journal of Computational and Graphical Statistics*  
 Dennis Prangle and Cecilia Viscardi  
   ![Paper image]({{ site.url }}/assets/sin.gif "sinusoidal model inference"){:height="350px" width="450px"}
 
