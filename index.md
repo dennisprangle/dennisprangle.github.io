@@ -4,10 +4,11 @@ title: Dennis Prangle's home page
 ---
 {% include JB/setup %}
 
-I'm a [senior lecturer in statistics](http://www.bristolmathsresearch.org/members-of-the-institute-for-statistical-science) at the University of Bristol.
+I'm an [associate professor in statistics](http://www.bristolmathsresearch.org/members-of-the-institute-for-statistical-science) at the University of Bristol.
 
 My current research is on the interface between Bayesian statistics and machine learning.
-I am particularly interested in developing approximate inference methods such as [simulation based inference](https://simulation-based-inference.org/) approaches and **variational inference**.
+I am particularly interested in developing approximate inference methods such as [simulation based inference](https://simulation-based-inference.org/) approaches, **variational inference**
+and composite likelihood.
 One application is to **likelihood-free inference**, where simulation of data is possible but the likelihood function is unavailable.
 Another is to **stochastic differential equations**
 I've worked on applications to population genetics, physics, ecology and epidemiology.

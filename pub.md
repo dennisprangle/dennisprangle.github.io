@@ -11,16 +11,17 @@ Please email me for copies of anything below that you cannot access.
 Papers
 ------
 
+### 2025
+
+- [Flexible Tails for Normalizing Flows](https://arxiv.org/abs/2406.16971)  
+*International Conference on Machine Learning*  
+Tennessee Hickling and Dennis Prangle
+
 ### 2024
 
 - [Optimal combination of composite likelihoods using approximate Bayesian computation with application to state-space models](https://arxiv.org/abs/2404.02313)
 *arXiv preprint*  
 Wentao Li, Rosabeth White and Dennis Prangle
-
-
-- [Flexible Tails for Normalizing Flows](https://arxiv.org/abs/2406.16971)
-*arXiv preprint*  
-Tennessee Hickling and Dennis Prangle
 
 - [Editorial: Bayesian Computations in the 21st Century](https://projecteuclid.org/journals/statistical-science/volume-39/issue-1/Editorial-Bayesian-Computations-in-the-21st-Century/10.1214/23-STS920.short)  
 *Statistical Science*  
