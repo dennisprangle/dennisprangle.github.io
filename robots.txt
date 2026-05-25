@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://dennisprangle.github.io/sitemap.xml
