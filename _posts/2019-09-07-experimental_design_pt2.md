@@ -5,13 +5,12 @@ description: ""
 category: research
 tags: [Bayesian statistics, Experimental design]
 ---
-{% include JB/setup %}
 
 **Edit: This post is now very out of date! See version 3+ of the paper for a new approach.**
 
 This is the second part of a blog post on a [preprint](https://arxiv.org/abs/1904.05703v2) by [Sophie Harbisher](https://www.ncl.ac.uk/maths-physics/postgraduate/current/pgrprofiles/harbishersophie.html),
 [Colin Gillespie](https://twitter.com/csgillespie) and me.
-The [first part](/research/2019/08/31/experimental_design) was about the computational benefits of using the "Fisher information gain" (trace of the Fisher information matrix)
+The [first part](/blog/2019/experimental_design/) was about the computational benefits of using the "Fisher information gain" (trace of the Fisher information matrix)
 as a utility function in Bayesian experimental design.
 This part is on theoretical justification for its use.
 
@@ -168,7 +167,7 @@ Experimental design can be viewed as the following decision problem.
 4. The experimenter selects an action based on $$y$$.
 5. The experimenter receives a **base utility** $$\mathcal{V}$$ depending on $$\tau, \theta, y, a$$.
 
-(We use the term "base utility" given a particular action to distinguish with "utility" $$\mathcal{U}$$ which was discussed in [part I](/research/2019/08/31/experimental_design) and will be introduced again shortly!)
+(We use the term "base utility" given a particular action to distinguish with "utility" $$\mathcal{U}$$ which was discussed in [part I](/blog/2019/experimental_design/) and will be introduced again shortly!)
 
 As in part 1 we assume that $$\theta$$ and $$y$$ come from a prior and model.
 The action could be a concrete decision - e.g. give a patient a particular treatment, pick government policy X over policy Y - in which case the base utility should ideally quantify the costs and benefits.
@@ -181,7 +180,7 @@ Suitable base utilities are then supplied by the theory of [proper scoring rules
 
 At step 4 the experimenter wants to pick the action maximising the expected value of $$\mathcal{V}$$ given $$\tau$$ and $$y$$.
 We can define a utility function $$\mathcal{U}(\tau, y)$$ which equals the maximum expected $$\mathcal{V}$$.
-We can then use the framework of [part I](/research/2019/08/31/experimental_design) and pick the design which maximises the expected $$\mathcal{U}$$.
+We can then use the framework of [part I](/blog/2019/experimental_design/) and pick the design which maximises the expected $$\mathcal{U}$$.
 
 ## Scoring rules
 
@@ -254,7 +253,7 @@ We've shown a decision theoretic derivation of the FIG utility function in Bayes
 
 But lots of questions remain for future work.
 First, **what is the practical difference in the kind of designs that FIG produces compared to SIG (and other utility functions)**?
-As discussed in [part I](/research/2019/08/31/experimental_design), one of our examples produced a design with lots of replicated observation times/locations.
+As discussed in [part I](/blog/2019/experimental_design/), one of our examples produced a design with lots of replicated observation times/locations.
 Is FIG particularly liable to this?
 In our paper we speculate that maybe FIG is too [risk seeking](https://en.wikipedia.org/wiki/Risk-seeking) - too favourable towards designs that will occasionally produce extremely informative data.
 
@@ -263,4 +262,4 @@ Perhaps we might be able to pick utilities with some desirable properties.
 [Ehm and Gneiting](https://projecteuclid.org/euclid.aos/1336396185) and [Parry, Dawid and Lauritzen](https://projecteuclid.org/euclid.aos/1336396183) recently investigated the class of proper local scoring rules, and it would be interesting to see what utility functions can result from them.
 Also a proper scoring rule $$S(q,\theta)$$ could be modified to $$c(\tau,y) S(q,\theta) + d(\tau,y)$$ and still be proper.
 Some choices of $$c$$ and $$d$$ might provide interesting alternative utilities.
-Finally perhaps we could reparameterise $$\theta$$ before applying a scoring rule in an interesting way (similarly to the weighting scheme in [part I](/research/2019/08/31/experimental_design)).
+Finally perhaps we could reparameterise $$\theta$$ before applying a scoring rule in an interesting way (similarly to the weighting scheme in [part I](/blog/2019/experimental_design/)).

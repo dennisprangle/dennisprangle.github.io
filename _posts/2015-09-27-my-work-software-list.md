@@ -5,7 +5,6 @@ description: ""
 category: Software
 tags: [Newcastle university, Computing]
 ---
-{% include JB/setup %}
 
 As I've just started a new job, I've been given a new desktop PC to work on.
 I thought I'd keep track of what I install on it so that I've got a complete list for next time.

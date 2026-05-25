@@ -4,7 +4,6 @@ title: "Mailing lists"
 category: Tips
 tags: [Email, Tips, Statistics, Machine Learning]
 ---
-{% include JB/setup %}
 
 I've been meaning to resurrect my blog to write a few posts on background information for graduate students.
 These are things I wished I knew when I was doing my PhD 10 years ago, and will be most relevant for people working the same field of computational statistics as me.

@@ -5,7 +5,6 @@ description: ""
 category: Software
 tags: [Jupyter, R, Computing]
 ---
-{% include JB/setup %}
 
 Below are some slides I wrote on the basics of using R with the [Jupyter notebook](http://jupyter.org/). Navigate by pressing space to avoid missing any slides! You can also see this in notebook form [here](https://github.com/dennisprangle/R-North-East-Talk-2016).
 

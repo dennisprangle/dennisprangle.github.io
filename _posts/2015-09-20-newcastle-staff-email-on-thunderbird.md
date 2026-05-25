@@ -5,7 +5,6 @@ description: ""
 category: Software
 tags: [Newcastle university, Email, Thunderbird, Exchange]
 ---
-{% include JB/setup %}
 
 I've recently started working at Newcastle University and found it a bit tricky to read my staff email with thunderbird.
 In case it saves anyone else some time, here's the settings I used.

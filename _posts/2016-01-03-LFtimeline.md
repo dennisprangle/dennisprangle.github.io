@@ -5,7 +5,6 @@ description: ""
 category: Research
 tags: [Likelihood-free, ABC]
 ---
-{% include JB/setup %}
 
 This is an incomplete of the appearance of various "likelihood-free" inference methods.
 Please let me know if there are any mistakes or things I should add.

@@ -4,7 +4,6 @@ title: "Posters in LaTeX"
 category: Tips
 tags: [Posters, Tips, LaTeX, Newcastle university]
 ---
-{% include JB/setup %}
 
 LaTeX is designed for typesetting mathematical documents, but it can also be used for posters.
 It's not the only option, but it's pretty convenient if you want to include a lot of mathematics in your poster and/or quickly reuse material from an article.

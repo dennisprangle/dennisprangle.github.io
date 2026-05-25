@@ -5,12 +5,11 @@ description: ""
 category: research
 tags: [ABC, Likelihood-free, Neural networks]
 ---
-{% include JB/setup %}
 
 Recently George Papamakarios and Iain Murray published [an arXiv preprint](http://arxiv.org/pdf/1605.06376.pdf) on likelihood-free Bayesian inference which substantially beats the state-of-the-art performance by a neat application of neural networks.
 I'm going to write a pair of blog posts about their paper.
 First of all this post summarises background material on likelihood-free methods and their limitations.
-The [second post](/research/2016/06/07/bayesian-inference-by-neural-networks2) will review and comment on the new paper.
+The [second post](/blog/2016/bayesian-inference-by-neural-networks2/) will review and comment on the new paper.
 Over the next few months I'm hoping to spend some time experimenting with their method,
 and I might post about my experiences in implementing it, if it's amenable to short blog posts!
 
@@ -55,7 +54,7 @@ A central aim of Bayesian inference is to produce methods which approximate usef
 
 ## Simulator based inference and ABC
 
-[Several methods](/research/2016/01/03/LFtimeline) have been proposed for inference using simulators rather than the likelihood function, sometimes called "likelihood-free inference".
+[Several methods](/blog/2016/LFtimeline/) have been proposed for inference using simulators rather than the likelihood function, sometimes called "likelihood-free inference".
 One of the most popular is [approximate Bayesian computation](https://en.wikipedia.org/wiki/Approximate_Bayesian_computation).
 The simplest version of this is based on [rejection sampling](https://en.wikipedia.org/wiki/Rejection_sampling):
 
@@ -126,4 +125,4 @@ It's hard to judge which choice of summaries makes the best trade-off between in
 ABC usually also performs poorly for high dimensional parameters.
 This is because learning such parameters generally entails having data which is high dimensional enough to cause problems.
 
-In the [second blog post](/research/2016/06/07/bayesian-inference-by-neural-networks2) I'll look at how the new paper tackles some of these problems.
+In the [second blog post](/blog/2016/bayesian-inference-by-neural-networks2/) I'll look at how the new paper tackles some of these problems.
