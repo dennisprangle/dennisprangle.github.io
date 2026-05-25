@@ -16,13 +16,11 @@ social: true # includes social icons at the bottom of the page
 
 I'm an [associate professor in statistics](http://www.bristolmathsresearch.org/members-of-the-institute-for-statistical-science) at the University of Bristol.
 
-My current research is on the interface between Bayesian statistics and machine learning.
-I am particularly interested in developing approximate inference methods such as [simulation based inference](https://simulation-based-inference.org/) approaches, **variational inference**
-and composite likelihood.
-One application is to **likelihood-free inference**, where simulation of data is possible but the likelihood function is unavailable.
-Another is to **stochastic differential equations**.
+My research is in computational statistics and machine learning, especially approximate inference.
+My main research topic is **[simulation based inference](https://simulation-based-inference.org/)**, where simulation of data is possible but the likelihood function is unavailable.
+Other interests include **variational inference**, **composite likelihood**, inference for **stochastic differential equations**, and **experimental design**.
 I've worked on applications to population genetics, physics, ecology and epidemiology.
-I'm also interested in **experimental design** and how to quickly derive effective high dimensional designs.
+Get in touch if you'd like to collaborate!
 
 ## Resources
 
