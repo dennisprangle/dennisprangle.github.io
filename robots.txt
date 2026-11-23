@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /notes/
 
 Sitemap: https://dennisprangle.github.io/sitemap.xml
