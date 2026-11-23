@@ -269,6 +269,10 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  - scope:
+      path: "notes"
+    values:
+      sitemap: false
 
 sass:
   style: compressed
