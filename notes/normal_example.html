@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Normal Mean Posterior</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #f4f7fb;
+        --muted: #a7b4c8;
+        --line: #2c3746;
+        --panel: #151923;
+        --panel-strong: #0d1118;
+        --page: #090c12;
+        --prior: #ffba3a;
+        --posterior: #23e0ad;
+        --truth: #ff5c8a;
+        --data: #8aa4ff;
+        --hot: #ff6a3d;
+        --cool: #46d8ff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          linear-gradient(115deg, rgba(255, 106, 61, 0.18), transparent 28%),
+          linear-gradient(245deg, rgba(70, 216, 255, 0.16), transparent 32%),
+          repeating-linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.035) 0,
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px,
+            transparent 72px
+          ),
+          repeating-linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.03) 0,
+            rgba(255, 255, 255, 0.03) 1px,
+            transparent 1px,
+            transparent 72px
+          ),
+          var(--page);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
+
+      main {
+        width: min(1120px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 34px 0 42px;
+      }
+
+      header {
+        margin-bottom: 22px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.8rem, 4vw, 3.1rem);
+        line-height: 1;
+        letter-spacing: 0;
+        color: var(--ink);
+        text-shadow: 0 0 22px rgba(35, 224, 173, 0.2);
+      }
+
+      .subtitle {
+        /* Match the plot panel: full width minus the stats column and its gap. */
+        max-width: calc(100% - 318px);
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.55;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 18px;
+        align-items: stretch;
+      }
+
+      .plot-wrap,
+      .stats {
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent 44%),
+          var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: 0 22px 70px rgba(0, 0, 0, 0.35);
+      }
+
+      .plot-wrap {
+        min-height: 560px;
+        padding: 18px;
+        background:
+          linear-gradient(135deg, rgba(255, 186, 58, 0.09), transparent 36%),
+          linear-gradient(225deg, rgba(35, 224, 173, 0.11), transparent 42%),
+          var(--panel-strong);
+      }
+
+      svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 520px;
+      }
+
+      .axis,
+      .grid {
+        vector-effect: non-scaling-stroke;
+      }
+
+      .axis {
+        stroke: #6d7890;
+        stroke-width: 1.2;
+      }
+
+      .grid {
+        stroke: rgba(167, 180, 200, 0.16);
+        stroke-width: 1;
+      }
+
+      .tick-label,
+      .axis-label {
+        fill: var(--muted);
+        font-size: 18px;
+      }
+
+      .axis-label {
+        font-weight: 700;
+      }
+
+      .curve {
+        fill: none;
+        stroke-width: 3.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        vector-effect: non-scaling-stroke;
+        filter: drop-shadow(0 0 9px rgba(255, 255, 255, 0.14));
+      }
+
+      .curve.prior {
+        stroke: var(--prior);
+      }
+
+      .curve.posterior {
+        stroke: var(--posterior);
+        stroke-width: 4.8;
+      }
+
+      .area {
+        opacity: 0.18;
+      }
+
+      .area.prior {
+        fill: var(--prior);
+      }
+
+      .area.posterior {
+        fill: var(--posterior);
+      }
+
+      .mean-line {
+        stroke-width: 1.5;
+        stroke-dasharray: 4 5;
+        vector-effect: non-scaling-stroke;
+      }
+
+      .mean-label {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .truth-marker {
+        stroke: var(--truth);
+        stroke-width: 2.6;
+        vector-effect: non-scaling-stroke;
+      }
+
+      .truth-label {
+        fill: var(--truth);
+        font-size: 17px;
+        font-weight: 800;
+      }
+
+      .rug-tick {
+        stroke: var(--data);
+        stroke-width: 1.6;
+        stroke-opacity: 0.7;
+        vector-effect: non-scaling-stroke;
+      }
+
+      .stats {
+        padding: 18px;
+      }
+
+      .legend {
+        display: grid;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .controls {
+        display: grid;
+        gap: 16px;
+        padding: 16px 0 18px;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .control {
+        display: grid;
+        gap: 8px;
+        border: 1px solid rgba(167, 180, 200, 0.14);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.035);
+        padding: 10px;
+      }
+
+      .control label {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .control output {
+        color: var(--ink);
+        font-weight: 800;
+        font-variant-numeric: tabular-nums;
+      }
+
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 18px;
+        background: transparent;
+        accent-color: var(--posterior);
+        cursor: pointer;
+      }
+
+      input[type="range"]::-webkit-slider-runnable-track {
+        height: 6px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--prior), var(--posterior), var(--data));
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        margin-top: -6px;
+        border: 2px solid var(--ink);
+        border-radius: 50%;
+        background: var(--panel-strong);
+        box-shadow: 0 0 0 3px rgba(35, 224, 173, 0.22);
+      }
+
+      input[type="range"]::-moz-range-track {
+        height: 6px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--prior), var(--posterior), var(--data));
+      }
+
+      input[type="range"]::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        border: 2px solid var(--ink);
+        border-radius: 50%;
+        background: var(--panel-strong);
+        box-shadow: 0 0 0 3px rgba(35, 224, 173, 0.22);
+      }
+
+      .legend-item {
+        display: grid;
+        grid-template-columns: 28px 1fr;
+        gap: 10px;
+        align-items: center;
+        padding: 4px 0;
+      }
+
+      .swatch {
+        width: 28px;
+        height: 4px;
+        border-radius: 999px;
+      }
+
+      .swatch.prior {
+        background: var(--prior);
+      }
+
+      .swatch.posterior {
+        height: 5px;
+        background: var(--posterior);
+      }
+
+      .swatch.truth {
+        height: 14px;
+        border-radius: 0;
+        background: linear-gradient(
+          90deg,
+          transparent calc(50% - 1.3px),
+          var(--truth) calc(50% - 1.3px) calc(50% + 1.3px),
+          transparent calc(50% + 1.3px)
+        );
+      }
+
+      .swatch.data {
+        height: 14px;
+        border-radius: 0;
+        opacity: 0.7;
+        background: repeating-linear-gradient(
+          90deg,
+          var(--data) 0 1.6px,
+          transparent 1.6px 5px
+        );
+      }
+
+      .legend-title {
+        margin: 0;
+        font-weight: 800;
+        color: var(--ink);
+      }
+
+      .legend-note {
+        margin: 3px 0 0;
+        color: var(--muted);
+        font-size: 0.88rem;
+        line-height: 1.35;
+      }
+
+      .stat-grid {
+        display: grid;
+        gap: 10px;
+        padding-top: 10px;
+      }
+
+      .stat {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        align-items: baseline;
+        padding: 10px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.028);
+        border-bottom: 1px solid rgba(167, 180, 200, 0.15);
+      }
+
+      .stat:last-child {
+        border-bottom: 0;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .stat strong {
+        color: var(--posterior);
+        font-variant-numeric: tabular-nums;
+      }
+
+      @media (max-width: 860px) {
+        .layout {
+          display: block;
+        }
+
+        .subtitle {
+          max-width: none;
+        }
+
+        .stats {
+          margin-top: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>Normal Mean Posterior</h1>
+          <p class="subtitle">
+            Conjugate update for IID observations from
+            X<sub>i</sub> | &theta; ~ N(&theta;, &sigma;<sup>2</sup>) with known
+            &sigma;<sup>2</sup> = 10.
+            <!-- The same seeded standard-normal draws are reused as n changes. -->
+          </p>
+        </div>
+      </header>
+
+      <section class="layout" aria-label="Normal posterior visualization">
+        <div class="plot-wrap">
+          <svg id="posteriorPlot" role="img" aria-labelledby="plotTitle plotDesc">
+            <title id="plotTitle">Prior and posterior for θ</title>
+            <desc id="plotDesc">
+              A line chart showing the Normal prior and posterior density for θ.
+            </desc>
+          </svg>
+        </div>
+
+        <aside class="stats" aria-label="Distribution parameters">
+          <div class="legend">
+            <div class="legend-item">
+              <span class="swatch prior"></span>
+              <div>
+                <p class="legend-title">Prior</p>
+                <p class="legend-note">N(&mu;<sub>0</sub>, &sigma;<sub>0</sub><sup>2</sup>)</p>
+              </div>
+            </div>
+            <div class="legend-item">
+              <span class="swatch posterior"></span>
+              <div>
+                <p class="legend-title">Posterior</p>
+                <p class="legend-note">N(&mu;<sub>n</sub>, &sigma;<sub>n</sub><sup>2</sup>)</p>
+              </div>
+            </div>
+            <div class="legend-item">
+              <span class="swatch truth"></span>
+              <div>
+                <p class="legend-title">True θ</p>
+                <p class="legend-note">Used to generate the sample</p>
+              </div>
+            </div>
+            <div class="legend-item">
+              <span class="swatch data"></span>
+              <div>
+                <p class="legend-title">Data</p>
+                <p class="legend-note">Observations</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="controls" aria-label="Sample size and prior controls">
+            <div class="control">
+              <label for="nSlider">
+                <span>Sample size n</span>
+                <output id="nValue" for="nSlider">100</output>
+              </label>
+              <input
+                id="nSlider"
+                type="range"
+                min="0"
+                max="4"
+                step="1"
+                value="3"
+                list="fiveStepTicks"
+              />
+            </div>
+
+            <div class="control">
+              <label for="mu0Slider">
+                <span>Prior mean &mu;<sub>0</sub></span>
+                <output id="mu0Value" for="mu0Slider">-5.0</output>
+              </label>
+              <input
+                id="mu0Slider"
+                type="range"
+                min="0"
+                max="4"
+                step="1"
+                value="1"
+                list="fiveStepTicks"
+              />
+            </div>
+
+            <div class="control">
+              <label for="sigma0Slider">
+                <span>Prior sd &sigma;<sub>0</sub></span>
+                <output id="sigma0Value" for="sigma0Slider">3.16</output>
+              </label>
+              <input
+                id="sigma0Slider"
+                type="range"
+                min="0"
+                max="4"
+                step="1"
+                value="2"
+                list="fiveStepTicks"
+              />
+            </div>
+            <datalist id="fiveStepTicks">
+              <option value="0"></option>
+              <option value="1"></option>
+              <option value="2"></option>
+              <option value="3"></option>
+              <option value="4"></option>
+            </datalist>
+          </div>
+
+          <div class="stat-grid" id="stats"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script>
+      const config = {
+        defaultN: 100,
+        theta: 2,
+        sigma2: 10,
+        defaultMu0: -5,
+        defaultSigma0: Math.sqrt(10),
+        seed: 9173
+      };
+
+      const sliderStops = {
+        n: [10, 25, 50, 100, 250],
+        mu0: [-10, -5, 0, 5, 10],
+        sigma0: [0.5, 1, 2, 4, 8]
+      };
+
+      const svg = document.getElementById("posteriorPlot");
+      const statsRoot = document.getElementById("stats");
+      const nSlider = document.getElementById("nSlider");
+      const mu0Slider = document.getElementById("mu0Slider");
+      const sigma0Slider = document.getElementById("sigma0Slider");
+      const nValue = document.getElementById("nValue");
+      const mu0Value = document.getElementById("mu0Value");
+      const sigma0Value = document.getElementById("sigma0Value");
+
+      function closestStopIndex(values, target) {
+        return values.reduce((bestIndex, value, index) => {
+          const bestDistance = Math.abs(values[bestIndex] - target);
+          const distance = Math.abs(value - target);
+          return distance < bestDistance ? index : bestIndex;
+        }, 0);
+      }
+
+      function sliderValue(key, slider) {
+        return sliderStops[key][Number(slider.value)];
+      }
+
+      nSlider.value = closestStopIndex(sliderStops.n, config.defaultN);
+      mu0Slider.value = closestStopIndex(sliderStops.mu0, config.defaultMu0);
+      sigma0Slider.value = closestStopIndex(sliderStops.sigma0, config.defaultSigma0);
+
+      const width = 880;
+      const height = 560;
+      const margin = { top: 28, right: 28, bottom: 84, left: 76 };
+      const plotWidth = width - margin.left - margin.right;
+      const plotHeight = height - margin.top - margin.bottom;
+      const xMin = -12;
+      const xMax = 12;
+      const xTicks = [-12, -8, -4, 0, 4, 8, 12];
+      const yAxisMax = 3;
+      const yTicks = [0, 0.75, 1.5, 2.25, 3];
+      const plotSamples = 2400;
+      const xs = Array.from({ length: plotSamples }, (_, index) => {
+        return xMin + (index / (plotSamples - 1)) * (xMax - xMin);
+      });
+
+      svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+
+      function mulberry32(seed) {
+        return function () {
+          let t = (seed += 0x6d2b79f5);
+          t = Math.imul(t ^ (t >>> 15), t | 1);
+          t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+          return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+        };
+      }
+
+      function normalSample(random) {
+        const u1 = Math.max(random(), Number.EPSILON);
+        const u2 = random();
+        return Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+      }
+
+      function normalPdf(x, mean, variance) {
+        const sd = Math.sqrt(variance);
+        const z = (x - mean) / sd;
+        return Math.exp(-0.5 * z * z) / (sd * Math.sqrt(2 * Math.PI));
+      }
+
+      function linePath(points) {
+        return points
+          .map((point, index) => `${index === 0 ? "M" : "L"} ${point.x.toFixed(2)} ${point.y.toFixed(2)}`)
+          .join(" ");
+      }
+
+      function areaPath(points, baselineY) {
+        const line = linePath(points);
+        const firstPoint = points[0];
+        const lastPoint = points[points.length - 1];
+        return `${line} L ${lastPoint.x.toFixed(2)} ${baselineY.toFixed(2)} L ${firstPoint.x.toFixed(2)} ${baselineY.toFixed(2)} Z`;
+      }
+
+      function formatAxisTick(value) {
+        return Number.isInteger(value) ? value.toString() : value.toFixed(2);
+      }
+
+      function addSvgElement(name, attributes) {
+        const element = document.createElementNS("http://www.w3.org/2000/svg", name);
+        Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, value));
+        svg.appendChild(element);
+        return element;
+      }
+
+      function clearPlot() {
+        Array.from(svg.children).forEach((child) => {
+          const tagName = child.tagName.toLowerCase();
+          if (tagName !== "title" && tagName !== "desc") {
+            child.remove();
+          }
+        });
+      }
+
+      const random = mulberry32(config.seed);
+      const standardNormalDraws = Array.from(
+        { length: Math.max(...sliderStops.n) },
+        () => normalSample(random)
+      );
+
+      function sampleSummary(n, theta, sigma2) {
+        const sigma = Math.sqrt(sigma2);
+        const selectedDraws = standardNormalDraws.slice(0, n);
+        const observations = selectedDraws.map((z) => theta + sigma * z);
+        const xbar =
+          observations.reduce((sum, value) => sum + value, 0) / observations.length;
+
+        return { xbar, observations };
+      }
+
+      function posteriorFromPrior(n, mu0, sigma02, xbar, sigma2) {
+        const posteriorVariance =
+          1 / (1 / sigma02 + n / sigma2);
+        const posteriorMean =
+          posteriorVariance *
+          (mu0 / sigma02 + (n * xbar) / sigma2);
+
+        return { posteriorMean, posteriorVariance };
+      }
+
+      function distributionsFor(model) {
+        return [
+          {
+            key: "prior",
+            label: "prior mean",
+            mean: model.mu0,
+            variance: model.sigma02,
+            color: "var(--prior)"
+          },
+          {
+            key: "posterior",
+            label: "posterior mean",
+            mean: model.posteriorMean,
+            variance: model.posteriorVariance,
+            color: "var(--posterior)"
+          }
+        ];
+      }
+
+      function drawPlot(distributions, observations) {
+        clearPlot();
+
+        const series = distributions.map((distribution) => ({
+          ...distribution,
+          points: xs.map((x) => ({
+            x,
+            y: normalPdf(x, distribution.mean, distribution.variance)
+          }))
+        }));
+
+        const xScale = (value) => margin.left + ((value - xMin) / (xMax - xMin)) * plotWidth;
+        const yScale = (value) => margin.top + plotHeight - (value / yAxisMax) * plotHeight;
+
+        yTicks.forEach((tick) => {
+          const y = yScale(tick);
+          addSvgElement("line", {
+            class: "grid",
+            x1: margin.left,
+            y1: y,
+            x2: width - margin.right,
+            y2: y
+          });
+          addSvgElement("text", {
+            class: "tick-label",
+            x: margin.left - 12,
+            y: y + 6,
+            "text-anchor": "end"
+          }).textContent = formatAxisTick(tick);
+        });
+
+        xTicks.forEach((tick) => {
+          const x = xScale(tick);
+          addSvgElement("line", {
+            class: "grid",
+            x1: x,
+            y1: margin.top,
+            x2: x,
+            y2: height - margin.bottom
+          });
+          addSvgElement("text", {
+            class: "tick-label",
+            x,
+            y: height - margin.bottom + 28,
+            "text-anchor": "middle"
+          }).textContent = tick.toString();
+        });
+
+        const baselineY = yScale(0);
+        series.forEach((item) => {
+          const pathPoints = item.points.map((point) => ({
+            x: xScale(point.x),
+            y: yScale(point.y)
+          }));
+          addSvgElement("path", {
+            class: `area ${item.key}`,
+            d: areaPath(pathPoints, baselineY)
+          });
+        });
+
+        addSvgElement("line", {
+          class: "axis",
+          x1: margin.left,
+          y1: height - margin.bottom,
+          x2: width - margin.right,
+          y2: height - margin.bottom
+        });
+        addSvgElement("line", {
+          class: "axis",
+          x1: margin.left,
+          y1: margin.top,
+          x2: margin.left,
+          y2: height - margin.bottom
+        });
+
+        observations
+          .filter((value) => value >= xMin && value <= xMax)
+          .forEach((value) => {
+            const x = xScale(value);
+            addSvgElement("line", {
+              class: "rug-tick",
+              x1: x,
+              y1: height - margin.bottom - 32,
+              x2: x,
+              y2: height - margin.bottom - 2
+            });
+          });
+
+        addSvgElement("text", {
+          class: "axis-label",
+          x: margin.left + plotWidth / 2,
+          y: height - 10,
+          "text-anchor": "middle"
+        }).textContent = "\u03b8";
+
+        const yAxisLabel = addSvgElement("text", {
+          class: "axis-label",
+          x: 18,
+          y: margin.top + plotHeight / 2,
+          "text-anchor": "middle",
+          transform: `rotate(-90 18 ${margin.top + plotHeight / 2})`
+        });
+        yAxisLabel.textContent = "density";
+
+        series.forEach((item) => {
+          const pathPoints = item.points.map((point) => ({
+            x: xScale(point.x),
+            y: yScale(point.y)
+          }));
+          addSvgElement("path", {
+            class: `curve ${item.key}`,
+            d: linePath(pathPoints)
+          });
+        });
+
+        const trueThetaX = xScale(config.theta);
+        addSvgElement("line", {
+          class: "truth-marker",
+          x1: trueThetaX,
+          y1: height - margin.bottom + 6,
+          x2: trueThetaX,
+          y2: height - margin.bottom + 36
+        });
+        addSvgElement("text", {
+          class: "truth-label",
+          x: trueThetaX,
+          y: height - margin.bottom + 58,
+          "text-anchor": "middle"
+        }).textContent = `true \u03b8 = ${config.theta.toFixed(1)}`;
+
+        distributions.forEach((distribution, index) => {
+          const x = xScale(distribution.mean);
+          const labelOnRight = x < margin.left + plotWidth * 0.72;
+          addSvgElement("line", {
+            class: "mean-line",
+            x1: x,
+            y1: margin.top,
+            x2: x,
+            y2: height - margin.bottom,
+            stroke: distribution.color
+          });
+          const label = addSvgElement("text", {
+            class: "mean-label",
+            x: x + (labelOnRight ? 8 : -8),
+            y: margin.top + 20 + index * 22,
+            fill: distribution.color,
+            "text-anchor": labelOnRight ? "start" : "end"
+          });
+          label.textContent = `${distribution.label}: ${distribution.mean.toFixed(2)}`;
+        });
+      }
+
+      function renderStats(sigma02, xbar, posteriorMean, posteriorVariance) {
+        const stats = [
+          ["sample mean", xbar.toFixed(3)],
+          ["prior variance", sigma02.toFixed(2)],
+          ["posterior mean", posteriorMean.toFixed(3)],
+          ["posterior variance", posteriorVariance.toFixed(4)]
+        ];
+
+        statsRoot.replaceChildren();
+        stats.forEach(([label, value]) => {
+          const row = document.createElement("div");
+          row.className = "stat";
+
+          const key = document.createElement("span");
+          key.textContent = label;
+
+          const val = document.createElement("strong");
+          val.textContent = value;
+
+          row.append(key, val);
+          statsRoot.appendChild(row);
+        });
+      }
+
+      function render() {
+        const n = sliderValue("n", nSlider);
+        const theta = config.theta;
+        const sigma2 = config.sigma2;
+        const mu0 = sliderValue("mu0", mu0Slider);
+        const sigma0 = sliderValue("sigma0", sigma0Slider);
+        const sigma02 = sigma0 * sigma0;
+        const { xbar, observations } = sampleSummary(n, theta, sigma2);
+        const { posteriorMean, posteriorVariance } =
+          posteriorFromPrior(n, mu0, sigma02, xbar, sigma2);
+
+        nValue.textContent = n.toString();
+        mu0Value.textContent = mu0.toFixed(1);
+        sigma0Value.textContent = sigma0.toFixed(2);
+        drawPlot(
+          distributionsFor({
+            mu0,
+            sigma02,
+            xbar,
+            posteriorMean,
+            posteriorVariance
+          }),
+          observations
+        );
+        renderStats(sigma02, xbar, posteriorMean, posteriorVariance);
+      }
+
+      nSlider.addEventListener("input", render);
+      mu0Slider.addEventListener("input", render);
+      sigma0Slider.addEventListener("input", render);
+      render();
+    </script>
+  </body>
+</html>
