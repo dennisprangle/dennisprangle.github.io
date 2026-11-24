@@ -89,7 +89,7 @@ of the course)</p></li>
 </ul>
 <p>Some more general textbooks are:</p>
 <ul>
-<li><p>Krushke “Doing Bayesian data analysis: a tutorial with R, JAGS,
+<li><p>Kruschke “Doing Bayesian data analysis: a tutorial with R, JAGS,
 and Stan”</p></li>
 <li><p>McElreath “Statistical rethinking: a Bayesian course with
 examples in R and Stan”</p></li>
@@ -194,7 +194,7 @@ disease.</p>
 <p>To see why consider 100 people. On average 10 have the disease, and 9
 of these test positive. On average 90 don’t have the disease, and 18 of
 these test positive. So 1/3 of positive tests are from people with the
-disease</p>
+disease.</p>
 <p>So our conclusion is because the disease is relatively unusual and
 <span style="color: red">false positive</span> tests are relatively
 common. Bayes theorem helps us assess the importance of these factors
@@ -545,7 +545,8 @@ where
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mover><mi>f</mi><mo accent="true">̃</mo></mover><mo stretchy="false" form="prefix">(</mo><mi>⋅</mi><mo stretchy="false" form="prefix">|</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.167em"></mspace><mi>θ</mi><mo>∈</mo><mi mathvariant="normal">Θ</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{\tilde{f}(\cdot|\theta),\,\theta\in\Theta\}</annotation></semantics></math>
 is a parametric model for
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mn>1</mn></msub><annotation encoding="application/x-tex">x_1</annotation></semantics></math>.</p></li>
-<li><p><em>Time series</em>: The observations now assumed to be <span style="color: red">dependent</span>,
+<li><p><em>Time series</em>: The observations are now assumed to be
+<span style="color: red">dependent</span>,
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="prefix">|</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mover><mi>f</mi><mo accent="true">̃</mo></mover><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">|</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><munderover><mo>∏</mo><mrow><mi>t</mi><mo>=</mo><mn>2</mn></mrow><mi>n</mi></munderover><msub><mover><mi>f</mi><mo accent="true">̃</mo></mover><mi>t</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo stretchy="false" form="prefix">|</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>x</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>,</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(x|\theta)=\tilde{f}_1(x_1|\theta)\prod_{t=2}^n\tilde{f}_t(x_t|x_1,\dots, x_{t-1},\theta)</annotation></semantics></math>
 where
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mover><mi>f</mi><mo accent="true">̃</mo></mover><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>⋅</mi><mo stretchy="false" form="prefix">|</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="0.167em"></mspace><mi>θ</mi><mo>∈</mo><mi mathvariant="normal">Θ</mi><mo>⊆</mo><msup><mi>ℝ</mi><mi>d</mi></msup><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\{\tilde{f}_1(\cdot|\theta),\,\theta\in\Theta\subseteq\mathbb{R}^d\}</annotation></semantics></math>
@@ -731,7 +732,7 @@ calculation</span></p>
         f(x|\theta) &amp; = \binom{n}{x} \theta^x (1-\theta)^{n-x}.
     
 \end{aligned}</annotation></semantics></math> We can combine these using
-Bayes’ theorem to find the posterior density.</p>
+Bayes theorem to find the posterior density.</p>
 <p>We will now use proportionality, ignoring factors not involving
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>:
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>π</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="prefix">|</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mfrac><mrow><mi>π</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="prefix">|</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>m</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>∝</mo><mi>π</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="prefix">|</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>∝</mo><msup><mi>θ</mi><mi>x</mi></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>θ</mi><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>n</mi><mo>−</mo><mi>x</mi></mrow></msup></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
@@ -852,7 +853,7 @@ mathematical description:</p>
 <code>x</code><code> </code><code>dbinom(theta,</code><code>n)</code><br />
 <code>}</code><br />
 <code>&quot;</code><br />
-<code>bin_data</code><code>=</code><code>list(x=15,</code><code>n=20)</code><br />
+<code>bin_data</code><code>=</code><code>list(x=8,</code><code>n=10)</code><br />
 <code>set.seed(1)</code><br />
 <code>out</code><code>=</code><code>jags(</code><br />
 <code>data</code><code>=</code><code>bin_data,</code><br />
@@ -910,7 +911,7 @@ They will then have different conclusions after observing the data.</p>
 <p><span style="color: red">Probability Interpretations</span></p>
 </div>
 </div>
-<p>Probability is a well defined area of mathematics - there’s no major
+<p>Probability is a well-defined area of mathematics – there’s no major
 debate about its axioms / results.</p>
 <p>But how do we interpret what probability calculations mean about the
 real world? Three popular interpretations are below. There’s lots of
@@ -931,7 +932,7 @@ Fundamentally, probabilities relate to real physical properties over
 repeated trials. Used in frequentist statistics, which is all about
 <span style="color: red">long run behaviour</span> of statistical
 methods.</p>
-<h4 id="classical-intepretation">Classical intepretation</h4>
+<h4 id="classical-interpretation">Classical interpretation</h4>
 <p>Probabilities are based on some underlying equally likely events,
 which are given equal probabilities. For instance
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℙ</mi><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">coin lands heads</mtext><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>ℙ</mi><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">coin lands tails</mtext><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">\mathbb{P}(\text{coin lands heads}) = \mathbb{P}(\text{coin lands tails}) = 0.5</annotation></semantics></math>.
@@ -956,12 +957,12 @@ values. We can then apply probability theory to
 in particular Bayes theorem.</p>
 <p>Under the frequentist interpretation
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
-is usually not a random variable. Because there usually aren’t repeated
+is usually not a random variable – because there usually aren’t repeated
 trials giving different
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
 values. Frequentist statistics treats
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
-as a unknown constant value. The aim is to try to get good long term
+as an unknown constant value. The aim is to try to get good long term
 behaviour under repeated trials with different <span style="color: red">datasets</span>. This is the basis of frequentist
 methods like <span style="color: red">confidence intervals</span> and
 <span style="color: red"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-values</span>.</p>
@@ -1109,7 +1110,7 @@ integers.</p></li>
 <div class="slide*">
 <div class="center">
 <div class="bfseries">
-<p><span style="color: red"><span style="color: 0.69,0.00,0.00">2.2:
+<p><span style="color: red"><span style="color: 0.69,0.00,0.00">2.2
 Conjugate prior distributions</span></span></p>
 </div>
 </div>
@@ -1161,14 +1162,14 @@ for
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sigma&gt;0</annotation></semantics></math>
 is a known fixed constant, and
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
-is a unknown parameter with prior
+is an unknown parameter with prior
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>∼</mo><msub><mi>𝒩</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>μ</mi><mn>0</mn></msub><mo>,</mo><msubsup><mi>σ</mi><mn>0</mn><mn>2</mn></msubsup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\theta \sim \mathcal{N}_1(\mu_0, \sigma_0^2)</annotation></semantics></math>
 for known constants
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mn>0</mn></msub><mo>,</mo><msub><mi>σ</mi><mn>0</mn></msub><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mu_0, \sigma_0&gt;0</annotation></semantics></math>
 (prior hyper-parameters).</p>
 <p>Then the posterior distribution is
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo stretchy="false" form="prefix">|</mo><mi>x</mi><mo>∼</mo><mi>𝒩</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>μ</mi><mi>n</mi></msub><mo>,</mo><msubsup><mi>σ</mi><mi>n</mi><mn>2</mn></msubsup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\theta|x \sim \mathcal{N}(\mu_n, \sigma^2_n)</annotation></semantics></math>
-where the observed data are is
+where the observed data are
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">x = (x_1, x_2, \ldots, x_n) \in \mathbb{R}^n</annotation></semantics></math>,
 and
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>μ</mi><mi>n</mi></msub><mo>=</mo><msub><mi>λ</mi><mi>n</mi></msub><msub><mi>μ</mi><mn>0</mn></msub><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><msub><mi>λ</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo><msub><mover><mi>x</mi><mo accent="true">‾</mo></mover><mi>n</mi></msub><mo>,</mo><mspace width="1.0em"></mspace><msubsup><mi>σ</mi><mi>n</mi><mn>2</mn></msubsup><mo>=</mo><mfrac><msup><mi>σ</mi><mn>2</mn></msup><mrow><msub><mi>n</mi><mn>0</mn></msub><mo>+</mo><mi>n</mi></mrow></mfrac></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><msub><mover><mi>x</mi><mo accent="true">‾</mo></mover><mi>n</mi></msub><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>x</mi><mi>k</mi></msub><mo>,</mo><mspace width="1.0em"></mspace><msub><mi>λ</mi><mi>n</mi></msub><mo>=</mo><mfrac><msub><mi>n</mi><mn>0</mn></msub><mrow><msub><mi>n</mi><mn>0</mn></msub><mo>+</mo><mi>n</mi></mrow></mfrac><mo>∈</mo><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mspace width="1.0em"></mspace><msub><mi>n</mi><mn>0</mn></msub><mo>=</mo><mfrac><msup><mi>σ</mi><mn>2</mn></msup><msubsup><mi>σ</mi><mn>0</mn><mn>2</mn></msubsup></mfrac><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{gathered}
@@ -1286,7 +1287,7 @@ such that
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℙ</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>&lt;</mo><mi>θ</mi><mo>&lt;</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0.95</mn></mrow><annotation encoding="application/x-tex">\mathbb{P}(a &lt; \theta &lt; b) = 0.95</annotation></semantics></math>?</p></li>
 <li><p>Do we think
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
-should have a symmteric distribution around its mean?</p></li>
+should have a symmetric distribution around its mean?</p></li>
 <li><p>Can we access any expert opinions?</p></li>
 <li><p>Do we have any previous studies which might inform our
 beliefs?</p></li>
@@ -1358,13 +1359,13 @@ two:</p>
 </div>
 <p>Usually a probability density function
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\pi(\theta)</annotation></semantics></math>
-must satisfy: <span id="eq:positivity" class="equation"><span id="eq:normalisation"></span><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><mi>π</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left"><mo>≥</mo><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mspace width="2.0em"></mspace><mtext mathvariant="normal">(2.1)</mtext></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><msub><mo>∫</mo><mi mathvariant="normal">Θ</mi></msub><mi>π</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mi>d</mi><mi>θ</mi></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mspace width="2.0em"></mspace><mtext mathvariant="normal">(2.2)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+must satisfy: <span id="eq:positivity" class="equation"><span id="eq:normalisation"></span><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><mi>π</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left"><mo>≥</mo><mn>0</mn></mtd><mtd columnalign="right" style="text-align: right"><mspace width="2.0em"></mspace><mtext mathvariant="normal">(2.1)</mtext></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><msub><mo>∫</mo><mi mathvariant="normal">Θ</mi></msub><mi>π</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mi mathvariant="normal">d</mi><mi>θ</mi></mtd><mtd columnalign="left" style="text-align: left"><mo>=</mo><mn>1</mn></mtd><mtd columnalign="right" style="text-align: right"><mspace width="2.0em"></mspace><mtext mathvariant="normal">(2.2)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
         \pi(\theta) &amp;\geq 0&amp;\qquad\text{(2.1)}\\
-        \int_\Theta \pi(\theta) d\theta &amp;= 1&amp;\qquad\text{(2.2)}\end{aligned}</annotation></semantics></math></span>
+        \int_\Theta \pi(\theta) \mathrm{d}\theta &amp;= 1&amp;\qquad\text{(2.2)}\end{aligned}</annotation></semantics></math></span>
 We’ll refer to this as a <span style="color: red">proper</span>
 density.</p>
 <p>In Bayesian statistics we sometimes allow <span style="color: red">improper</span> densities, which replace <a href="#eq:normalisation" data-reference-type="eqref" data-reference="eq:normalisation">(2.2)</a> with
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∫</mo><mi mathvariant="normal">Θ</mi></msub><mi>π</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mi>d</mi><mi>θ</mi><mo>=</mo><mi>∞</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\int_\Theta \pi(\theta) d\theta = \infty.</annotation></semantics></math></p>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∫</mo><mi mathvariant="normal">Θ</mi></msub><mi>π</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mi mathvariant="normal">d</mi><mi>θ</mi><mo>=</mo><mi>∞</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\int_\Theta \pi(\theta) \mathrm{d}\theta = \infty.</annotation></semantics></math></p>
 <p>Improper densities are hard to interpret e.g. they allow
 probabilities greater than 1!</p>
 <p>However they can be useful as priors in Bayes theorem. A Bayesian
@@ -1550,12 +1551,12 @@ with respect to
 <div class="slide*">
 <div class="center">
 <div class="bfseries">
-<p><span style="color: red">Laplace’s prior: reparametrisation
+<p><span style="color: red">Laplace’s prior: reparameterisation
 issues</span></p>
 </div>
 </div>
 <p>The most important problem with Laplace’s prior is the problem of
-<span style="color: red">invariance under reparametrisation</span>.</p>
+<span style="color: red">invariance under reparameterisation</span>.</p>
 <p>Suppose
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>∝</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\pi(\theta) \propto 1</annotation></semantics></math>
 (Laplace’s prior). Consider a change of variables
@@ -1575,7 +1576,7 @@ same!</p>
 <div class="slide*">
 <div class="center">
 <div class="bfseries">
-<p><span style="color: red">Laplace’s prior reparametrisation
+<p><span style="color: red">Laplace’s prior reparameterisation
 example</span></p>
 </div>
 </div>
@@ -1657,8 +1658,8 @@ applications.</p>
 </div>
 </div>
 <p>Compared to Laplace’s prior, the Jeffreys prior has the advantage of
-being <span style="color: red">invariant to reparametrisation</span>, as
-shown in the next result.</p>
+being <span style="color: red">invariant to reparameterisation</span>,
+as shown in the next result.</p>
 <div class="prop">
 <p><strong>Proposition 2.1</strong>. <em>Assume that
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
@@ -1667,9 +1668,9 @@ has prior density
 Then the reparameterisation
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo>:=</mo><msup><mi>g</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\eta:=g^{-1}(\theta)</annotation></semantics></math>
 has density
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>π</mi><mo>*</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mrow><mi>det</mi><mo>⁡</mo></mrow><mi>J</mi><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>π</mi><mi>J</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msqrt><mrow><mrow><mi>det</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mover><mi>I</mi><mo accent="true">̃</mo></mover><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">\pi^*(\eta)= |\det J(\eta)|\pi_J(g(\eta))= \sqrt{\det(\tilde{I}( \eta))}</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>π</mi><mo>*</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mrow><mi>det</mi><mo>⁡</mo></mrow><mi>J</mi><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>π</mi><mi>J</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>∝</mo><msqrt><mrow><mrow><mi>det</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mover><mi>ℐ</mi><mo accent="true">̃</mo></mover><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">\pi^*(\eta)= |\det J(\eta)|\pi_J(g(\eta)) \propto \sqrt{\det(\tilde{\mathcal{I}}( \eta))}</annotation></semantics></math>
 where
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>I</mi><mo accent="true">̃</mo></mover><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\tilde{I}(\eta)</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>ℐ</mi><mo accent="true">̃</mo></mover><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\tilde{\mathcal{I}}(\eta)</annotation></semantics></math>
 has row
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
 column
@@ -1805,7 +1806,7 @@ distribution.</p>
 resulting posterior is proper!</p></li>
 <li><p>The Jeffreys prior is not always easy to derive analytically,
 especially in the multivariate case.</p></li>
-<li><p>Jeffreys prior is invariant to reparametrisation. Does this mean
+<li><p>Jeffreys prior is invariant to reparameterisation. Does this mean
 it perfectly captures prior uncertainty? Many statisticians would argue
 no.</p></li>
 <li><p>Harold Jeffreys proposed this prior distribution in 1946,
@@ -1830,7 +1831,7 @@ proper probability distribution.</p></li>
 (see Chapter 6).</p></li>
 <li><p>Can lack of information truly be encoded in a prior distribution?
 Some current philosophical research argues no(!): such “deep
-uncertainty” must be captured outside probabilistic methods</p></li>
+uncertainty” must be captured outside probabilistic methods.</p></li>
 </ul>
 </div>
 <div class="slide*">
@@ -1881,7 +1882,7 @@ should have a posterior probability of
 <h4 id="remarks-5">Remarks</h4>
 <ul>
 <li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>
-is sometime called the <span style="color: red">level</span> of the
+is sometimes called the <span style="color: red">level</span> of the
 credible set.</p></li>
 <li><p>A
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>α</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1-\alpha)</annotation></semantics></math>
@@ -1901,7 +1902,7 @@ it’s common to calculate a credible set for each individual
 parameter.</p></li>
 <li><p>A credible set may not always exist for a given
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>.
-This is common for discete parameters.</p></li>
+This is common for discrete parameters.</p></li>
 <li><p>For continuous parameters, there are usually multiple possible
 credible sets.</p></li>
 </ul>
@@ -1953,7 +1954,7 @@ for some value
 </div>
 <h4 id="remarks-6">Remarks</h4>
 <ul>
-<li><p>An advantange of symmetric credible intervals is that they always
+<li><p>An advantage of symmetric credible intervals is that they always
 contain
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>θ</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{\theta}</annotation></semantics></math>.</p></li>
 <li><p>The rest of the notes take
@@ -2051,7 +2052,7 @@ must typically be calculated by computer, which is usually quick to do.
 (For MCMC output use <code>HPDinterval</code> in R.)</p></li>
 <li><p>Finding HPD sets for multivariate
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
-is harder. It’s more common to find seperate HPD intervals for each
+is harder. It’s more common to find separate HPD intervals for each
 individual parameter.</p></li>
 </ul>
 </div>
@@ -2066,7 +2067,7 @@ individual parameter.</p></li>
 posterior, all 3 types of
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">50\%</annotation></semantics></math>
 credible interval are the same(!):
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>2.33</mn><mo>,</mo><mn>4.67</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[2.33, 4.67]</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>2.33</mn><mo>,</mo><mn>3.67</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[2.33, 3.67]</annotation></semantics></math>
 (to 2dp).</p>
 <p><img role="img" aria-label="image" src="data:image/png;base64,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rq7u+++/9/f337dvX1ZW1ldffRUZGXnt2rUBLvbq1asKhWLFihX5+fkmk+lvf/vb7NmzP/nkE45YNEiDNEiDNEiDDKPyU6lUVqu1/y0Wi8Xd3d3x1/yDDz4IDw//7LPPioqKnnvuObkW6+vre/bs2UOHDt1///0PPvhgVVXVABdYVlaWl5d34MABHx8febfA888//9lnn+3duzchIWHt2rWff/55Z2fnwFM3Go02my08PPzcuXNFRUXnzp17+OGH16xZ093dzUGLBmmQBmmQBmmQYVRmo0ePbm9v739Le3u77C+/kJfBYIiPj3/mmWeeeuqp2traVatWyftXac6cOStWrDh69GhPT8+ePXsGuMCMjIzQ0NCSkpLs7Ozs7OwrV65UVVVlZ2dXVFQMcMlLlixZtGhR35dhYWEzZ86srKwc4GKlp342bNggPWnl7u6+du3alpaWgf89Ag3SIA3SIA3SIMPozcaPH19fX282m/tuqa6uHj9+vCOv85NPPvnll1+ePn1669atNz23YreGhobo6Ojy8vK+W7RabUhIyPXr1we45LFjxyqVyqL/09bWdvny5aKiopqamoEstqen5+LFi52dnf1v9PDwGPgrzaU/wVqttv+mEEKYTCYOWjRIgzRIgzRIg4PHRS5pIZ2XHD9+XPqysbFRoVDs379fxh+xYsUKGS9pcerUKSHEJ598Iu926Orq8vDweO211/puaW5udnNzy87OlvcHzZ49W5ZLWhiNRi8vr9TU1P4r7OPjs3nz5gEuWa/X+/r67tmzp++W3//+925ubnJddQ80SIM0SIM0SIN3Qu0iZ4Q///nPFyxYkJKS8te//tXb2/vFF18cP358QkKCw66wdFGxwsLCv/zlL/1v37lz56RJk+xerLe3d2pq6ttvvx0UFPTII4+0tLRs2rRJq9X+5je/cczt4OnpuWbNmu3btyuVyri4OL1ev2nTJj8/v3Xr1g1wyVqtNiUl5dVXXzWZTJGRkSUlJdu3b1+/fr287wYFDdIgDdIgDdLg7aldp8MjR44kJSUtXrzYYrFERkaWlpbKdVExSUREhFwfQSuE0Gg0sbGxZrO5/1MqQoibXn5uhy1btri5ub399tuvv/66SqV66KGHSkpKxowZI/tfPbmWmZeXFxwcvGPHjrfeesvd3T06Ovrvf/97/6cV7PbHP/5RCLF58+a2tjZ/f/+NGzemp6dzxKJBGqRBGqRBGhxMCpvN5lIpmkwms9nMmbcQ4tq1a35+fk7xVkpJa2urn5+fm5ubvIu12WwtLS3StZRBgzRIgzRIgzTIMAoAAABXoWQTAAAAgGEUAAAADKMAAAAAwygAAAAYRgEAAACGUQAAADCMAgAAAAyjAAAAYBgFAAAAGEYBAADAMAoAAAAwjAIAAIBhFAAAAGAYBQAAAMMoAAAAwDAKAAAAhlEAAAAwjAIAAAAMowAAAGAYBQAAABhGAQAAwDAKAAAAMIwCAACAYRQAAABgGAUAAIDzUrMJXFN7e/s///lPjUazZMkSd3d3NghAgwANYkjwyKgrOnv27Jw5c4QQFy5ciIyMbGpqYpsANAjQIIaEwmazsRVcislkCg0NTU5O1ul0QoiVK1cajcbjx4+zZQAaBGgQg49HRl3O4cOHm5qannrqKenLJ554ori4uLa2li0D0CBAg2AYxT137tw5IcSECROkL8PDw4UQ3377LVsGoEGABjH4eAOTy6mpqXFzc2ttbW1tbRVC/PDDD0IIzggBGgRoEAyjGAxXr161Wq2rV6+Wvuzp6RFCNDc3s2UAGgRoEAyjuOfGjx+vVqsrKiqkL8+dOxcREaHRaNgyAA0CNIjBx2tGXc7kyZO7u7ulZyWkE0QhxJQpU9gyAA0CNAiGUdxzc+fOFUJ888030pcVFRVqtTo6OpotA9AgQIMYfFxn1OVYrdbIyMjZs2fv2bPHZrOFh4fHxsbu3r2bLQPQIECDYBjFYGhqakpKSpo6derly5dHjBhRWFjIJ6EBNAjQIBhGMaguXbrk4eERHBzMpgBoEKBBMIwCAADA5fAGJgAAADCMAgAAgGEUAAAAYBgFAAAAwygAAADAMAoAAACGUQAAAIBhFAAAAAyjAAAAAMMoAAAAGEYBAAAAhlEAAAAwjAIAAAAMowAAAGAYBQAAABhGAQAAwDAKAAAAhlEAAACAYRQAAAAMowAAAADDKAAAABhGAQAAAIZRAAAAMIwCAAAAA/c/5erY7CWfREIAAAAASUVORK5CYII=" alt="image" /></p>
 <p>For the
@@ -2136,7 +2137,7 @@ values
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>⊆</mo><mi mathvariant="normal">Θ</mi></mrow><annotation encoding="application/x-tex">C(x) \subseteq \Theta</annotation></semantics></math>
 given data
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.
-The frequentist approach consider the performance of this method under
+The frequentist approach considers the performance of this method under
 repeated sampling of data
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
 from the model under a parameter value
@@ -2194,15 +2195,15 @@ Carlo</span></span><br />
 simple form that is easy to summarise to give point estimates, credible
 intervals etc.</p>
 <p>However conjugate priors only exist for the simplest models. Most
-posterior are too complicated to summarise using purely mathematical
+posteriors are too complicated to summarise using purely mathematical
 methods. This limited the practical application of Bayesian
 statistics.</p>
 <p><span style="color: red">Markov chain Monte Carlo</span> (MCMC)
-algorithms are a computer based methods which allows posteriors to be
+algorithms are computer-based methods which allow posteriors to be
 summarised. They date back to the 1950s, but became popular in Bayesian
 statistics in the 1990s, and today allow Bayesian statistics to be
 performed in practice.</p>
-<p>This chapter gives an introduction to the MCMC algorithms.</p>
+<p>This chapter gives an introduction to MCMC algorithms.</p>
 <p>A separate document on Blackboard contains an introduction to JAGS:
 computer software to perform MCMC in practice.</p>
 <p><span style="color: red">Writing and understanding R and JAGS code is
@@ -2244,7 +2245,7 @@ where
 is the prior density,
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">L(\theta)</annotation></semantics></math>
 is the likelihood and
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><msub><mo>∫</mo><mi mathvariant="normal">Θ</mi></msub><msub><mi>π</mi><mtext mathvariant="normal">prior</mtext></msub><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mi>L</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mi>d</mi><mi>θ</mi></mrow><annotation encoding="application/x-tex">m = \int_\Theta \pi_\text{prior}(\theta) L(\theta) d\theta</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><msub><mo>∫</mo><mi mathvariant="normal">Θ</mi></msub><msub><mi>π</mi><mtext mathvariant="normal">prior</mtext></msub><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mi>L</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mi mathvariant="normal">d</mi><mi>θ</mi></mrow><annotation encoding="application/x-tex">m = \int_\Theta \pi_\text{prior}(\theta) L(\theta) \mathrm{d}\theta</annotation></semantics></math>
 is the evidence.</p>
 <h4 id="remarks-8">Remarks</h4>
 <ul>
@@ -2321,7 +2322,7 @@ density itself!</p>
 <p>The rest of the chapter describes the theory behind
 Metropolis-Hastings, and other MCMC algorithms. This includes a review
 of the theory of Markov chains.</p>
-<p>Then we use the theory todiscuss issues about running MCMC in
+<p>Then we use the theory to discuss issues about running MCMC in
 practice, and present the JAGS software to do this.</p>
 </div>
 <div class="slide*">
@@ -2331,7 +2332,7 @@ practice, and present the JAGS software to do this.</p>
 Monte Carlo methods</span></span></p>
 </div>
 </div>
-<p><span style="color: red">Monte Carlo</span> is numerical method to
+<p><span style="color: red">Monte Carlo</span> is a numerical method to
 estimate an expectation:
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝔼</mi><mi>π</mi></msub><mo stretchy="false" form="prefix">[</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\mathbb{E}_\pi[f(X)]</annotation></semantics></math>
 Here
@@ -2387,7 +2388,7 @@ expressed in terms of expectations of various functions. For
 example:</p>
 <ul>
 <li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝔼</mi><mi>π</mi></msub><mo stretchy="false" form="prefix">[</mo><mi>X</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\mathbb{E}_\pi[X]</annotation></semantics></math>
-(posterior expecation, a point estimate)<br />
+(posterior expectation, a point estimate)<br />
 Here
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">f(x) = x</annotation></semantics></math>.</p></li>
 <li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝔼</mi><mi>π</mi></msub><mo stretchy="false" form="prefix">[</mo><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\mathbb{E}_\pi[(X - \mu)^2]</annotation></semantics></math>
@@ -2440,7 +2441,7 @@ the 1700s. See <span> <a href="https://www.scientificamerican.com/blog/cocktail-
 <p>Modern Monte Carlo was invented in the 1940s for atomic weapons
 calculations, using the first electronic computers.</p>
 <p>The name “Monte Carlo” was a code-name for the project, and a
-reference to casinos of the Monte Carlo, since using randomness is a key
+reference to the casinos of Monte Carlo, since using randomness is a key
 part of Monte Carlo methods and of gambling!</p>
 <p>Key papers:</p>
 <ul>
@@ -2464,7 +2465,7 @@ part of Monte Carlo methods and of gambling!</p>
 <li><p>Some interest in the 1970s</p></li>
 <li><p>1984: Geman and Geman (Gibbs sampling for spatial
 statistics)</p></li>
-<li><p>1990: Gelfand and Smith (Metropolis-Hastings for general purpose
+<li><p>1990: Gelfand and Smith (Gibbs sampling for general purpose
 Bayesian statistics)</p></li>
 <li><p>Mid 1990s: BUGS (MCMC software for statistics)</p></li>
 </ul>
@@ -2491,7 +2492,7 @@ be a finite set, called the <span style="color: red">state
 space</span>.</p>
 <p>Elements of
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>
-are referred to as the <span style="color: red">states</span></p>
+are referred to as the <span style="color: red">states</span>.</p>
 <p>We’ll consider
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>m</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">S=\{1,2,\ldots,m\}</annotation></semantics></math>
 for
@@ -2507,7 +2508,7 @@ takes values in
 is a <span style="color: red">Markov chain</span> if
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℙ</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>j</mi><mo stretchy="false" form="prefix">|</mo><msub><mi>X</mi><mn>1</mn></msub><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>X</mi><mn>2</mn></msub><mo>=</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub><mo>=</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>ℙ</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>j</mi><mo stretchy="false" form="prefix">|</mo><msub><mi>X</mi><mi>n</mi></msub><mo>=</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbb{P}(X_{n+1}=j | X_1=x_1, X_2=x_2, \ldots, X_n=x_n) = \mathbb{P}(X_{n+1}=j | X_n=x_n)</annotation></semantics></math>
 for all
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">n \geq 0</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n \geq 1</annotation></semantics></math>
 and
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>,</mo><mi>j</mi><mo>∈</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">x_1,\ldots,x_n,j \in S</annotation></semantics></math>.</p>
 <h4 id="remarks-9">Remarks:</h4>
@@ -2518,7 +2519,7 @@ depends on the past history of
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
 only through the current state
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>X</mi><mi>n</mi></msub><annotation encoding="application/x-tex">X_n</annotation></semantics></math>.</p></li>
-<li><p>The theory presented here generalises with a few change to any
+<li><p>The theory presented here generalises with a few changes to any
 countable set
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>
 e.g. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mi>ℕ</mi></mrow><annotation encoding="application/x-tex">S = \mathbb{N}</annotation></semantics></math>.</p></li>
@@ -2533,7 +2534,7 @@ is countable,
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
 is said to be a <span style="color: red">discrete state Markov
 chain</span>. Later we’ll generalise to <span style="color: red">continuous state Markov chains</span> where
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">S = \mathbb{R}^n</annotation></semantics></math>.</p></li>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><msup><mi>ℝ</mi><mi>d</mi></msup></mrow><annotation encoding="application/x-tex">S = \mathbb{R}^d</annotation></semantics></math>.</p></li>
 </ul>
 </div>
 <div class="slide*">
@@ -2546,10 +2547,10 @@ chain</span>. Later we’ll generalise to <span style="color: red">continuous st
 <p>We’ll only consider Markov chains where
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℙ</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>j</mi><mo stretchy="false" form="prefix">|</mo><msub><mi>X</mi><mi>n</mi></msub><mo>=</mo><mi>i</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>p</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\mathbb{P}(X_{n+1}=j | X_n=i) = p_{i,j}</annotation></semantics></math>
 for all
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">n \geq 0</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n \geq 1</annotation></semantics></math>
 and
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>,</mo><mi>j</mi><mo>∈</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">i,j \in S</annotation></semantics></math>.</p>
-<p>These are called <span style="color: red">time-homogenous</span>
+<p>These are called <span style="color: red">time-homogeneous</span>
 because the probability doesn’t depend on
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>.</p>
 <p>The value
@@ -2590,11 +2591,11 @@ transition probability</span> as
 The following results were proved in Probability 2:</p>
 <ul>
 <li><p>For any
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>,
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℙ</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy="false" form="postfix">)</mo></mrow></msub><mo>=</mo><mi>j</mi><mo stretchy="false" form="prefix">|</mo><msub><mi>X</mi><mi>m</mi></msub><mo>=</mo><mi>i</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msubsup><mi>p</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup></mrow><annotation encoding="application/x-tex">\mathbb{P}(X_{(n+m)}=j | X_m=i) = p_{i,j}^{(n)}</annotation></semantics></math><br />
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℙ</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo></mrow></msub><mo>=</mo><mi>j</mi><mo stretchy="false" form="prefix">|</mo><msub><mi>X</mi><mi>s</mi></msub><mo>=</mo><mi>i</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msubsup><mi>p</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup></mrow><annotation encoding="application/x-tex">\mathbb{P}(X_{(n+s)}=j | X_s=i) = p_{i,j}^{(n)}</annotation></semantics></math><br />
 That is,
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>p</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msubsup><annotation encoding="application/x-tex">p_{i,j}^{(n)}</annotation></semantics></math>
-is the probablity of moving from state
+is the probability of moving from state
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
 to state
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
@@ -2679,7 +2680,7 @@ for some
 for all sufficiently large
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>.</p></li>
 </ul>
-<p>Irreduciblity means that it’s possible to move between any pair of
+<p>Irreducibility means that it’s possible to move between any pair of
 states in a finite time.</p>
 <p>Aperiodicity avoids the possibility that the chain can only return to
 state
@@ -2710,7 +2711,7 @@ distribution
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi>lim</mi><mrow><mi>n</mi><mo>→</mo><mi>∞</mi></mrow></munder><mi>ℙ</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mi>n</mi></msub><mo>=</mo><mi>j</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>π</mi><mi>j</mi></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">\lim_{n \to \infty} \mathbb{P}(X_n=j) = \pi_j,</annotation></semantics></math>
 for all
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>∈</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">j \in S</annotation></semantics></math>.</p>
-<p>Result 1 proves existence and unique of a stationary
+<p>Result 1 proves existence and uniqueness of a stationary
 distribution.</p>
 <p>Result 2 proves convergence to the stationary distribution.</p>
 <h4 id="remarks-10">Remarks</h4>
@@ -2747,7 +2748,7 @@ Probability 2 proved that <span style="color: red">detailed balance
 implies
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>π</mi><annotation encoding="application/x-tex">\pi</annotation></semantics></math>
 is stationary</span>.</p>
-<p>The idea is that the under the distribution
+<p>The idea is that under the distribution
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>π</mi><annotation encoding="application/x-tex">\pi</annotation></semantics></math>,
 the frequency of moves from
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
@@ -2776,7 +2777,7 @@ interesting MCMC algorithms!)</p>
 aperiodic Markov chain, with stationary distribution
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>π</mi><annotation encoding="application/x-tex">\pi</annotation></semantics></math>
 and a function
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>S</mi><mo>→</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">f:S \to \mathbb{R}^m</annotation></semantics></math>.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>S</mi><mo>→</mo><msup><mi>ℝ</mi><mi>r</mi></msup></mrow><annotation encoding="application/x-tex">f:S \to \mathbb{R}^r</annotation></semantics></math>.
 Then as
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>→</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">k \to \infty</annotation></semantics></math>
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mi>k</mi></mfrac><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mi>f</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>→</mo><msub><mi>𝔼</mi><mi>π</mi></msub><mo stretchy="false" form="prefix">[</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">\frac{1}{k} \sum_{n=1}^k f(X_n) \to \mathbb{E}_\pi[f(X)].</annotation></semantics></math>
@@ -2821,7 +2822,7 @@ to
 <p>Detailed balance is a way to verify that a given distribution
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>π</mi><annotation encoding="application/x-tex">\pi</annotation></semantics></math>
 is the stationary distribution of
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math></p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>.</p>
 <h4 id="remarks-12">Remarks</h4>
 <ul>
 <li><p>The most important property is detailed balance. It’s usually
@@ -2942,7 +2943,7 @@ irreducibility and aperiodicity (2) detailed balance.</p>
 Irreducibility and aperiodicity</span></p>
 </div>
 </div>
-<p>Now it’s sufficient to show
+<p>It is sufficient to show
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>p</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mtext mathvariant="normal">MH</mtext></msubsup><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">p_{i,j}^{\text{MH}} &gt; 0</annotation></semantics></math>
 for all
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i,j</annotation></semantics></math>.</p>
@@ -3020,7 +3021,7 @@ is:</p>
 <ul>
 <li><p>The transition matrix is now replaced by the proposal
 densities.</p></li>
-<li><p>We should pick proposal densities that it’s easy to sample
+<li><p>We should pick proposal densities which are easy to sample
 from.</p></li>
 <li><p>Metropolis-Hastings can also be extended to other choices of
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>
@@ -3104,14 +3105,14 @@ sampler</span></p>
 <p>Suppose
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mover><mi>x</mi><mo accent="true">̃</mo></mover><mo stretchy="false" form="prefix">|</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">q(\tilde{x} | x)</annotation></semantics></math>
 equals some density
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mover><mi>x</mi><mo accent="true">̃</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">q(\tilde{x})</annotation></semantics></math></p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mover><mi>x</mi><mo accent="true">̃</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">q(\tilde{x})</annotation></semantics></math>.</p>
 <p>The resulting algorithm is known as an <span style="color: red">independence sampler</span> (as the proposal is
 independent of
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>)</p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>).</p>
 <p>The acceptance probability simplifies to
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mover><mi>x</mi><mo accent="true">̃</mo></mover><mi>t</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi>min</mi><mo>⁡</mo></mrow><mo minsize="240%" maxsize="240%" stretchy="true" form="prefix">{</mo><mn>1</mn><mo>,</mo><mfrac><mrow><mi>π</mi><mo stretchy="false" form="prefix">(</mo><msub><mover><mi>x</mi><mo accent="true">̃</mo></mover><mi>t</mi></msub><mo stretchy="false" form="postfix">)</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>π</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><msub><mover><mi>x</mi><mo accent="true">̃</mo></mover><mi>t</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo minsize="240%" maxsize="240%" stretchy="true" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\alpha(x_{t-1},\tilde{x}_t)= \min\bigg\{1,\frac{\pi(\tilde{x}_t)q(x_{t-1})}{\pi(x_{t-1})q(\tilde{x}_t)}\bigg\}</annotation></semantics></math></p>
 <p><strong>Tuning choice:</strong> The user must pick
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math></p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>.</p>
 <p><strong>Remark:</strong> This algorithm is simple but often
 inefficient unless
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>≈</mo><mi>π</mi></mrow><annotation encoding="application/x-tex">q \approx \pi</annotation></semantics></math>.
@@ -3187,7 +3188,7 @@ MCMC iterations, and thus more computer time.</p>
 <p>Making tuning choices cannot be fully automated, and requires
 trial-and-error based on some diagnostics of MCMC output.</p>
 <h4 id="remark-13">Remark</h4>
-<p>“Mixing” is used informally to mean a MCMC chain which behaves well:
+<p>“Mixing” is used informally to mean an MCMC chain which behaves well:
 it explores the target distribution quickly and accurately.</p>
 </div>
 <div class="slide*">
@@ -3201,7 +3202,7 @@ burn-in</span></p>
 <p>Suppose
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mn>1</mn></msub><annotation encoding="application/x-tex">x_1</annotation></semantics></math>
 is far from the main region of posterior probability. Then the initial
-part of chain just moves to the main region, and is not useful for
+part of the chain just moves to the main region, and is not useful for
 estimating expectations. This behaviour can be detected using <span style="color: red">trace plots</span> (see next slide).</p>
 <p>We can deal with this by simply removing the initial “burn-in” part
 of the chain. So these states are not used to produce estimates.</p>
@@ -3332,7 +3333,7 @@ time steps.</p>
 <p>The formula used for time series
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>x</mi><mi>T</mi></msub></mrow><annotation encoding="application/x-tex">x_1, x_2, \ldots, x_T</annotation></semantics></math>
 is:
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mfrac><mn>1</mn><mrow><mi>T</mi><mo>−</mo><mi>k</mi></mrow></mfrac><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mi>T</mi></munderover><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><msub><mi>x</mi><mrow><mi>t</mi><mo>−</mo><mi>k</mi></mrow></msub><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo></mrow><msqrt><mrow><mfrac><mn>1</mn><mi>T</mi></mfrac><munderover><mo>∑</mo><mrow><mi>s</mi><mo>=</mo><mn>1</mn></mrow><mi>T</mi></munderover><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><msup><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mn>2</mn></msup><mfrac><mn>1</mn><mrow><mi>T</mi><mo>−</mo><mi>k</mi></mrow></mfrac><munderover><mo>∑</mo><mrow><mi>s</mi><mo>=</mo><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mi>T</mi></munderover><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><msub><mi>x</mi><mrow><mi>t</mi><mo>−</mo><mi>k</mi></mrow></msub><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><msup><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">\gamma(k)=\frac{\frac{1}{T-k}\sum_{t=k+1}^T\big(x_{t}-\bar{x}\big)\big(x_{t-k}-\bar{x}\big)}{\sqrt{\frac{1}{T}\sum_{s=1}^T\big(x_{t}-\bar{x}\big)^2\frac{1}{T-k}\sum_{s=k+1}^T\big(x_{t-k}-\bar{x}\big)^2}}</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mfrac><mn>1</mn><mrow><mi>T</mi><mo>−</mo><mi>k</mi></mrow></mfrac><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mi>T</mi></munderover><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><msub><mi>x</mi><mrow><mi>t</mi><mo>−</mo><mi>k</mi></mrow></msub><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo></mrow><msqrt><mrow><mfrac><mn>1</mn><mi>T</mi></mfrac><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>T</mi></munderover><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><msub><mi>x</mi><mi>t</mi></msub><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><msup><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mn>2</mn></msup><mfrac><mn>1</mn><mrow><mi>T</mi><mo>−</mo><mi>k</mi></mrow></mfrac><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mi>T</mi></munderover><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><msub><mi>x</mi><mrow><mi>t</mi><mo>−</mo><mi>k</mi></mrow></msub><mo>−</mo><mover><mi>x</mi><mo accent="true">‾</mo></mover><msup><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">\gamma(k)=\frac{\frac{1}{T-k}\sum_{t=k+1}^T\big(x_{t}-\bar{x}\big)\big(x_{t-k}-\bar{x}\big)}{\sqrt{\frac{1}{T}\sum_{t=1}^T\big(x_{t}-\bar{x}\big)^2\frac{1}{T-k}\sum_{t=k+1}^T\big(x_{t-k}-\bar{x}\big)^2}}</annotation></semantics></math>
 with
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo>=</mo><mfrac><mn>1</mn><mi>T</mi></mfrac><msubsup><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>T</mi></msubsup><msub><mi>x</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">\bar{x}=\frac{1}{T}\sum_{t=1}^T x_{t}</annotation></semantics></math>.</p>
 <p>(You don’t need to learn this formula for this course!)</p>
@@ -3385,8 +3386,8 @@ diagnostics.</p>
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.69</mn><annotation encoding="application/x-tex">0.69</annotation></semantics></math>.
 The traceplot shows reasonable mixing. But the acf plot shows there is
 some dependence up to about lag 10.</p>
-<p>The acceptance probability is above the optimal value, suggesting we
-could try a larger proposal variance. Alternatively, just thinning with
+<p>The acceptance rate is above the optimal value, suggesting we could
+try a larger proposal variance. Alternatively, just thinning with
 interval 10 should give reasonable MCMC estimates.</p>
 </div>
 <div class="slide*">
@@ -3428,7 +3429,7 @@ better tuning is needed.</p>
 <div class="slide*">
 <div class="center">
 <div class="bfseries">
-<p><span style="color: red"><span style="color: 0.69,0.00,0.00">4.7: The
+<p><span style="color: red"><span style="color: 0.69,0.00,0.00">4.7 The
 Gibbs sampler</span></span></p>
 </div>
 </div>
@@ -3470,7 +3471,8 @@ and
 </div>
 <p>Suppose
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
-is uniform on the unit circle centred at zero. Then:
+is uniform on the unit disc (the region inside the unit circle) centred
+at zero. Then:
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msup><mi>X</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow></msup><mo stretchy="false" form="prefix">|</mo><msup><mi>X</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow></msup></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>a</mi><mo>∼</mo><mi>𝒰</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>a</mi><mn>2</mn></msup></mrow></msqrt><mo>,</mo><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>a</mi><mn>2</mn></msup></mrow></msqrt><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msup><mi>X</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow></msup><mo stretchy="false" form="prefix">|</mo><msup><mi>X</mi><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow></msup></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>b</mi><mo>∼</mo><mi>𝒰</mi><mo stretchy="false" form="prefix">(</mo><mi>−</mi><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></msqrt><mo>,</mo><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></msqrt><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
 X^{(1)} | X^{(2)} &amp;= a \sim \mathcal{U}( -\sqrt{1-a^2}, \sqrt{1-a^2} ) \\
 X^{(2)} | X^{(1)} &amp;= b \sim \mathcal{U}( -\sqrt{1-b^2}, \sqrt{1-b^2} ) \\
@@ -3506,7 +3508,7 @@ is in a fixed order.</p>
 </div>
 </div>
 <p>It’s easier to analyse a slightly modified Gibbs sampler algorithm,
-updates component in a random order:</p>
+which updates the components in a random order:</p>
 </div>
 <div class="slide*">
 <div class="center">
@@ -3538,7 +3540,7 @@ steps.</p>
 examinable)</span></p>
 </div>
 </div>
-<p>We’ll check that random scan Gibbs sampler satisfies detailed
+<p>We’ll check that the random scan Gibbs sampler satisfies detailed
 balance. We need to show that for all
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>d</mi></msup></mrow><annotation encoding="application/x-tex">x,y \in \mathbb{R}^d</annotation></semantics></math>,
 <span id="eq:db_gibbs" class="equation"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo stretchy="false" form="prefix">|</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>π</mi><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="prefix">|</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">
@@ -3546,7 +3548,7 @@ balance. We need to show that for all
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="prefix">|</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">q(x|y)</annotation></semantics></math>
 is the probability density of moving to
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
-for
+from
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
 in one Gibbs sampler iteration.</p>
 <p>If
@@ -3601,8 +3603,7 @@ JAGS)</p></li>
 active research area.</p>
 <h4 id="next-steps">Next steps</h4>
 <p>We’ll look at performing MCMC in practice using JAGS: see the
-separate document. (In particular its last page has a practice exercise
-which should be useful for the assessed assignment!)</p>
+separate document.</p>
 </div>
 </body>
 </html>
